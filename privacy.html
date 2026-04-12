@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プライバシーポリシー | TransWorks</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, 'SF Pro Display', 'Helvetica Neue', sans-serif; background: #eaecf8; color: #1d1d1f; min-height: 100vh; }
+
+    .lang-toggle { display: flex; gap: 8px; justify-content: center; padding: 20px; }
+    .lang-btn { background: rgba(255,255,255,0.45); border-top: 1px solid rgba(255,255,255,0.95); border-left: 1px solid rgba(255,255,255,0.8); border-right: 1px solid rgba(255,255,255,0.2); border-bottom: 1px solid rgba(255,255,255,0.35); color: rgba(0,0,0,0.4); padding: 5px 14px; border-radius: 20px; font-size: 12px; cursor: pointer; backdrop-filter: blur(12px); }
+    .lang-btn.active { background: rgba(255,255,255,0.7); color: rgba(0,0,0,0.7); }
+
+    .header {
+      background: rgba(255,255,255,0.35);
+      backdrop-filter: blur(20px);
+      border-bottom: 0.5px solid rgba(255,255,255,0.6);
+      padding: 24px;
+      text-align: center;
+    }
+    .header a { font-size: 13px; color: rgba(0,0,0,0.4); text-decoration: none; display: inline-block; margin-bottom: 12px; }
+    .header a:hover { color: rgba(0,0,0,0.7); }
+    .header h1 { font-size: 28px; font-weight: 500; color: #1d1d1f; letter-spacing: -0.5px; }
+    .header p { font-size: 13px; color: rgba(0,0,0,0.35); margin-top: 6px; }
+
+    .content {
+      max-width: 720px;
+      margin: 40px auto;
+      padding: 0 24px 80px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.42);
+      backdrop-filter: blur(28px) saturate(180%);
+      -webkit-backdrop-filter: blur(28px) saturate(180%);
+      border-radius: 22px;
+      border-top: 1px solid rgba(255,255,255,0.98);
+      border-left: 1px solid rgba(255,255,255,0.8);
+      border-right: 1px solid rgba(255,255,255,0.3);
+      border-bottom: 1px solid rgba(255,255,255,0.5);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.9);
+      padding: 40px 48px;
+      margin-bottom: 16px;
+    }
+
+    .section-num {
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: rgba(0,0,0,0.3);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 500;
+      color: #1d1d1f;
+      margin-bottom: 16px;
+      letter-spacing: -0.3px;
+    }
+
+    p {
+      font-size: 14px;
+      color: rgba(0,0,0,0.55);
+      line-height: 1.85;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      list-style: none;
+      margin: 12px 0;
+    }
+
+    ul li {
+      font-size: 14px;
+      color: rgba(0,0,0,0.55);
+      line-height: 1.85;
+      padding: 4px 0;
+      display: flex;
+      gap: 10px;
+    }
+
+    ul li::before {
+      content: '—';
+      color: rgba(0,0,0,0.2);
+      flex-shrink: 0;
+    }
+
+    .divider {
+      border: none;
+      border-top: 0.5px solid rgba(0,0,0,0.06);
+      margin: 20px 0;
+    }
+
+    .highlight-box {
+      background: rgba(255,255,255,0.35);
+      border-radius: 12px;
+      border: 0.5px solid rgba(255,255,255,0.7);
+      padding: 16px 20px;
+      margin: 16px 0;
+    }
+
+    .highlight-box p { margin-bottom: 0; }
+
+    .footer {
+      padding: 28px 24px;
+      text-align: center;
+      background: rgba(255,255,255,0.3);
+      backdrop-filter: blur(10px);
+      border-top: 0.5px solid rgba(255,255,255,0.6);
+    }
+    .footer-links { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-bottom: 10px; }
+    .footer-links a { font-size: 13px; color: rgba(0,0,0,0.3); text-decoration: none; }
+    .footer-links a:hover { color: rgba(0,0,0,0.6); }
+    .footer-copy { font-size: 12px; color: rgba(0,0,0,0.2); }
+
+    @media (max-width: 600px) {
+      .card { padding: 28px 24px; }
+      .header h1 { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="lang-toggle">
+  <button class="lang-btn active" onclick="setLang('ja')">日本語</button>
+  <button class="lang-btn" onclick="setLang('en')">English</button>
+</div>
+
+<div class="header">
+  <a href="index.html" id="back-link">← TransWorksトップへ</a>
+  <h1 id="page-title">プライバシーポリシー</h1>
+  <p id="updated">最終更新日：2026年4月13日</p>
+</div>
+
+<div class="content">
+
+  <!-- 1 -->
+  <div class="card">
+    <p class="section-num">01</p>
+    <h2 id="h1">はじめに</h2>
+    <p id="p1">TransWorks（以下「本アプリ」）は、日本企業と外国人労働者をつなぐ多言語コミュニケーションアプリです。本プライバシーポリシーは、本アプリの利用に際して収集する情報の取り扱いについて説明します。</p>
+  </div>
+
+  <!-- 2 -->
+  <div class="card">
+    <p class="section-num">02</p>
+    <h2 id="h2">運営者情報</h2>
+    <ul>
+      <li id="op1">運営者名：Tadaki Tokairin</li>
+      <li id="op2">お問い合わせ：tadaki.tokairin@gmail.com</li>
+    </ul>
+  </div>
+
+  <!-- 3 -->
+  <div class="card">
+    <p class="section-num">03</p>
+    <h2 id="h3">収集する情報</h2>
+    <p id="p3a"><strong>アカウント情報</strong></p>
+    <ul>
+      <li id="c1">氏名またはニックネーム</li>
+      <li id="c2">メールアドレス</li>
+      <li id="c3">職種（18カテゴリーから選択またはその他自由記入）</li>
+      <li id="c4">勤務国</li>
+    </ul>
+    <hr class="divider">
+    <p id="p3b"><strong>利用情報</strong></p>
+    <ul>
+      <li id="c5">チャットメッセージ（翻訳処理のため）</li>
+      <li id="c6">音声データ（テキストに変換後チャットルームに保存。音声データ自体は変換後即時削除）</li>
+      <li id="c7">画像・ファイル（チャットルーム内に保存・表示。OCR機能使用時はテキスト認識・翻訳処理を行います）</li>
+      <li id="c8">ポイント購入・消費履歴</li>
+      <li id="c9">アプリの利用状況</li>
+      <li id="c10">通報時のウォーターマーク付きスクリーンショット（管理者のみアクセス可能）</li>
+      <li id="c11">通報時の端末情報（機種・OSバージョン）</li>
+    </ul>
+  </div>
+
+  <!-- 4 -->
+  <div class="card">
+    <p class="section-num">04</p>
+    <h2 id="h4">情報の利用目的</h2>
+    <ul>
+      <li id="u1">翻訳・AI・音声・OCR機能の提供</li>
+      <li id="u2">ポイント管理・課金処理</li>
+      <li id="u3">アプリの改善・新機能開発</li>
+      <li id="u4">カスタマーサポート</li>
+      <li id="u5">職種・勤務国データの分析・改善（匿名化処理後）</li>
+      <li id="u6">職種別ナレッジデータの蓄積・活用（匿名化処理後）</li>
+      <li id="u7">不正利用・ハラスメントの防止・対応</li>
+      <li id="u8">通報内容の確認・対応</li>
+    </ul>
+  </div>
+
+  <!-- 5 -->
+  <div class="card">
+    <p class="section-num">05</p>
+    <h2 id="h5">第三者サービスへの情報提供</h2>
+    <p id="p5">本アプリは以下の第三者サービスを利用しており、各サービスのプライバシーポリシーが適用されます。</p>
+    <ul>
+      <li id="t1">Google Firebase（データ保存・認証・通知）</li>
+      <li id="t2">Google Firebase Storage（画像・ファイル・スクリーンショットの保存）</li>
+      <li id="t3">Google翻訳API（翻訳機能）</li>
+      <li id="t4">Google Cloud Vision API（OCR機能）</li>
+      <li id="t5">Google Text-to-Speech API（音声読み上げ）</li>
+      <li id="t6">Google Speech-to-Text API（音声入力）</li>
+      <li id="t7">OpenAI API（AIアシスタント機能）</li>
+      <li id="t8">Gemini API（AIアシスタント機能）</li>
+      <li id="t9">Apple App Store / Google Play Store（課金処理）</li>
+    </ul>
+  </div>
+
+  <!-- 6 -->
+  <div class="card">
+    <p class="section-num">06</p>
+    <h2 id="h6">データの保存場所</h2>
+    <ul>
+      <li id="d1">Firestoreデータ（アカウント情報・チャットメッセージ等）：Google Firebase（asia-northeast1：東京リージョン）</li>
+      <li id="d2">Firebase Storage（画像・ファイル・スクリーンショット等）：Google Firebase Storage（asia-northeast1：東京リージョン）</li>
+      <li id="d3">OCR処理用PDFファイル：Google Firebase Storage（asia：アジアマルチリージョン）に一時保存。処理完了後に削除されます。</li>
+    </ul>
+  </div>
+
+  <!-- 7 -->
+  <div class="card">
+    <p class="section-num">07</p>
+    <h2 id="h7">データの保持期間</h2>
+    <ul>
+      <li id="r1">アカウント情報：退会後3ヶ月</li>
+      <li id="r2">チャットメッセージ：アカウント存続期間中</li>
+      <li id="r3">画像・ファイル：チャットルーム存続期間中</li>
+      <li id="r4">音声データ：テキスト変換処理完了後即時削除。変換されたテキストはチャットルーム存続期間中保存</li>
+      <li id="r5">OCR処理用PDFファイル：処理完了後即時削除</li>
+      <li id="r6">ポイント購入履歴：法令に基づき7年間保存</li>
+      <li id="r7">通報スクリーンショット：対応完了後6ヶ月</li>
+      <li id="r8">職種・勤務国データ：匿名化後、期間の定めなく保存</li>
+    </ul>
+  </div>
+
+  <!-- 8 -->
+  <div class="card">
+    <p class="section-num">08</p>
+    <h2 id="h8">ウォーターマーク付きスクリーンショットについて</h2>
+    <p id="p8a">ユーザーがチャットルーム内でスクリーンショットを撮影した場合、以下の情報を含むウォーターマークが自動的に付与されます。</p>
+    <ul>
+      <li id="w1">アプリ名</li>
+      <li id="w2">チャットルームID</li>
+      <li id="w3">ユーザーID</li>
+      <li id="w4">撮影日時</li>
+    </ul>
+    <div class="highlight-box">
+      <p id="p8b">このスクリーンショットは同時にGoogle Firebase Storage（asia-northeast1：東京リージョン）に保存され、通報時の証拠として利用されます。保存されたスクリーンショットは運営者のみがアクセス可能です。</p>
+    </div>
+  </div>
+
+  <!-- 9 -->
+  <div class="card">
+    <p class="section-num">09</p>
+    <h2 id="h9">ユーザーの権利</h2>
+    <ul>
+      <li id="ri1">個人情報の開示請求</li>
+      <li id="ri2">個人情報の訂正・削除</li>
+      <li id="ri3">データのエクスポート</li>
+      <li id="ri4">アカウントの削除</li>
+      <li id="ri5">職種別ナレッジデータ活用のオプトアウト</li>
+    </ul>
+    <p id="p9" style="margin-top:12px;">お問い合わせフォームよりご連絡ください。</p>
+  </div>
+
+  <!-- 10 -->
+  <div class="card">
+    <p class="section-num">10</p>
+    <h2 id="h10">職種・勤務国データの活用について</h2>
+    <p id="p10a">登録時に入力いただいた職種・勤務国データは、個人を特定できない形で匿名化処理を行った上で、以下の目的に活用します。</p>
+    <ul>
+      <li id="kd1">AIアシスタントの精度向上</li>
+      <li id="kd2">職種別ナレッジデータベースの構築</li>
+      <li id="kd3">世界中の同職種ユーザーへの情報提供</li>
+      <li id="kd4">サービスの改善・新機能開発</li>
+    </ul>
+    <div class="highlight-box">
+      <p id="p10b">ユーザーはアプリの設定よりこの機能をオプトアウトすることができます。</p>
+    </div>
+  </div>
+
+  <!-- 11 -->
+  <div class="card">
+    <p class="section-num">11</p>
+    <h2 id="h11">通報システムについて</h2>
+    <p id="p11a">チャットルーム内のメッセージに問題があると判断した場合、ユーザーは通報機能を利用できます。通報時には以下の情報が運営者に送信されます。</p>
+    <ul>
+      <li id="rp1">ウォーターマーク付きスクリーンショット</li>
+      <li id="rp2">通報理由</li>
+      <li id="rp3">通報者のユーザーID</li>
+      <li id="rp4">通報日時</li>
+      <li id="rp5">端末情報（機種・OSバージョン）</li>
+    </ul>
+    <div class="highlight-box">
+      <p id="p11b">通報者の情報は被通報者に開示されません。運営者が内容を確認の上、適切な対応を行います。</p>
+    </div>
+  </div>
+
+  <!-- 12 -->
+  <div class="card">
+    <p class="section-num">12</p>
+    <h2 id="h12">子供のプライバシー</h2>
+    <p id="p12">本アプリは16歳未満の方を対象としていません。16歳未満の方の個人情報を意図せず収集した場合は、速やかに削除します。</p>
+  </div>
+
+  <!-- 13 -->
+  <div class="card">
+    <p class="section-num">13</p>
+    <h2 id="h13">セキュリティ</h2>
+    <p id="p13">ユーザーの個人情報保護のため、業界標準のセキュリティ対策を実施しています。ただし、インターネット上での完全なセキュリティを保証するものではありません。</p>
+  </div>
+
+  <!-- 14 -->
+  <div class="card">
+    <p class="section-num">14</p>
+    <h2 id="h14">準拠法・管轄裁判所</h2>
+    <p id="p14">本ポリシーは日本法に準拠し、紛争が生じた場合は東京地方裁判所を第一審の専属的合意管轄裁判所とします。</p>
+  </div>
+
+  <!-- 15 -->
+  <div class="card">
+    <p class="section-num">15</p>
+    <h2 id="h15">プライバシーポリシーの変更</h2>
+    <p id="p15">本ポリシーは予告なく変更される場合があります。重要な変更がある場合はアプリ内にて通知します。</p>
+  </div>
+
+  <!-- 16 -->
+  <div class="card">
+    <p class="section-num">16</p>
+    <h2 id="h16">お問い合わせ</h2>
+    <ul>
+      <li id="ct1">メールアドレス：tadaki.tokairin@gmail.com</li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="index.html" id="fl-top">トップページ</a>
+    <a href="terms.html" id="fl-terms">利用規約</a>
+    <a href="contact.html" id="fl-contact">お問い合わせ</a>
+  </div>
+  <p class="footer-copy">© 2026 TransWorks. All rights reserved.</p>
+</div>
+
+<script>
+const ja = {
+  'back-link': '← TransWorksトップへ',
+  'page-title': 'プライバシーポリシー',
+  'updated': '最終更新日：2026年4月13日',
+  'h1': 'はじめに',
+  'p1': 'TransWorks（以下「本アプリ」）は、日本企業と外国人労働者をつなぐ多言語コミュニケーションアプリです。本プライバシーポリシーは、本アプリの利用に際して収集する情報の取り扱いについて説明します。',
+  'h2': '運営者情報',
+  'op1': '運営者名：Tadaki Tokairin',
+  'op2': 'お問い合わせ：tadaki.tokairin@gmail.com',
+  'h3': '収集する情報',
+  'p3a': '<strong>アカウント情報</strong>',
+  'c1': '氏名またはニックネーム', 'c2': 'メールアドレス', 'c3': '職種（18カテゴリーから選択またはその他自由記入）', 'c4': '勤務国',
+  'p3b': '<strong>利用情報</strong>',
+  'c5': 'チャットメッセージ（翻訳処理のため）',
+  'c6': '音声データ（テキストに変換後チャットルームに保存。音声データ自体は変換後即時削除）',
+  'c7': '画像・ファイル（チャットルーム内に保存・表示。OCR機能使用時はテキスト認識・翻訳処理を行います）',
+  'c8': 'ポイント購入・消費履歴', 'c9': 'アプリの利用状況',
+  'c10': '通報時のウォーターマーク付きスクリーンショット（管理者のみアクセス可能）',
+  'c11': '通報時の端末情報（機種・OSバージョン）',
+  'h4': '情報の利用目的',
+  'u1': '翻訳・AI・音声・OCR機能の提供', 'u2': 'ポイント管理・課金処理', 'u3': 'アプリの改善・新機能開発',
+  'u4': 'カスタマーサポート', 'u5': '職種・勤務国データの分析・改善（匿名化処理後）',
+  'u6': '職種別ナレッジデータの蓄積・活用（匿名化処理後）', 'u7': '不正利用・ハラスメントの防止・対応', 'u8': '通報内容の確認・対応',
+  'h5': '第三者サービスへの情報提供',
+  'p5': '本アプリは以下の第三者サービスを利用しており、各サービスのプライバシーポリシーが適用されます。',
+  't1': 'Google Firebase（データ保存・認証・通知）', 't2': 'Google Firebase Storage（画像・ファイル・スクリーンショットの保存）',
+  't3': 'Google翻訳API（翻訳機能）', 't4': 'Google Cloud Vision API（OCR機能）',
+  't5': 'Google Text-to-Speech API（音声読み上げ）', 't6': 'Google Speech-to-Text API（音声入力）',
+  't7': 'OpenAI API（AIアシスタント機能）', 't8': 'Gemini API（AIアシスタント機能）',
+  't9': 'Apple App Store / Google Play Store（課金処理）',
+  'h6': 'データの保存場所',
+  'd1': 'Firestoreデータ（アカウント情報・チャットメッセージ等）：Google Firebase（asia-northeast1：東京リージョン）',
+  'd2': 'Firebase Storage（画像・ファイル・スクリーンショット等）：Google Firebase Storage（asia-northeast1：東京リージョン）',
+  'd3': 'OCR処理用PDFファイル：Google Firebase Storage（asia：アジアマルチリージョン）に一時保存。処理完了後に削除されます。',
+  'h7': 'データの保持期間',
+  'r1': 'アカウント情報：退会後3ヶ月', 'r2': 'チャットメッセージ：アカウント存続期間中',
+  'r3': '画像・ファイル：チャットルーム存続期間中',
+  'r4': '音声データ：テキスト変換処理完了後即時削除。変換されたテキストはチャットルーム存続期間中保存',
+  'r5': 'OCR処理用PDFファイル：処理完了後即時削除', 'r6': 'ポイント購入履歴：法令に基づき7年間保存',
+  'r7': '通報スクリーンショット：対応完了後6ヶ月', 'r8': '職種・勤務国データ：匿名化後、期間の定めなく保存',
+  'h8': 'ウォーターマーク付きスクリーンショットについて',
+  'p8a': 'ユーザーがチャットルーム内でスクリーンショットを撮影した場合、以下の情報を含むウォーターマークが自動的に付与されます。',
+  'w1': 'アプリ名', 'w2': 'チャットルームID', 'w3': 'ユーザーID', 'w4': '撮影日時',
+  'p8b': 'このスクリーンショットは同時にGoogle Firebase Storage（asia-northeast1：東京リージョン）に保存され、通報時の証拠として利用されます。保存されたスクリーンショットは運営者のみがアクセス可能です。',
+  'h9': 'ユーザーの権利',
+  'ri1': '個人情報の開示請求', 'ri2': '個人情報の訂正・削除', 'ri3': 'データのエクスポート',
+  'ri4': 'アカウントの削除', 'ri5': '職種別ナレッジデータ活用のオプトアウト',
+  'p9': 'お問い合わせフォームよりご連絡ください。',
+  'h10': '職種・勤務国データの活用について',
+  'p10a': '登録時に入力いただいた職種・勤務国データは、個人を特定できない形で匿名化処理を行った上で、以下の目的に活用します。',
+  'kd1': 'AIアシスタントの精度向上', 'kd2': '職種別ナレッジデータベースの構築',
+  'kd3': '世界中の同職種ユーザーへの情報提供', 'kd4': 'サービスの改善・新機能開発',
+  'p10b': 'ユーザーはアプリの設定よりこの機能をオプトアウトすることができます。',
+  'h11': '通報システムについて',
+  'p11a': 'チャットルーム内のメッセージに問題があると判断した場合、ユーザーは通報機能を利用できます。通報時には以下の情報が運営者に送信されます。',
+  'rp1': 'ウォーターマーク付きスクリーンショット', 'rp2': '通報理由', 'rp3': '通報者のユーザーID',
+  'rp4': '通報日時', 'rp5': '端末情報（機種・OSバージョン）',
+  'p11b': '通報者の情報は被通報者に開示されません。運営者が内容を確認の上、適切な対応を行います。',
+  'h12': '子供のプライバシー',
+  'p12': '本アプリは16歳未満の方を対象としていません。16歳未満の方の個人情報を意図せず収集した場合は、速やかに削除します。',
+  'h13': 'セキュリティ',
+  'p13': 'ユーザーの個人情報保護のため、業界標準のセキュリティ対策を実施しています。ただし、インターネット上での完全なセキュリティを保証するものではありません。',
+  'h14': '準拠法・管轄裁判所',
+  'p14': '本ポリシーは日本法に準拠し、紛争が生じた場合は東京地方裁判所を第一審の専属的合意管轄裁判所とします。',
+  'h15': 'プライバシーポリシーの変更',
+  'p15': '本ポリシーは予告なく変更される場合があります。重要な変更がある場合はアプリ内にて通知します。',
+  'h16': 'お問い合わせ',
+  'ct1': 'メールアドレス：tadaki.tokairin@gmail.com',
+  'fl-top': 'トップページ', 'fl-terms': '利用規約', 'fl-contact': 'お問い合わせ',
+};
+
+const en = {
+  'back-link': '← Back to TransWorks',
+  'page-title': 'Privacy Policy',
+  'updated': 'Last Updated: April 13, 2026',
+  'h1': 'Introduction',
+  'p1': 'TransWorks ("the App") is a multilingual communication app designed to connect Japanese companies with foreign workers. This Privacy Policy explains how we collect, use, and handle information when you use the App.',
+  'h2': 'Operator Information',
+  'op1': 'Operator: Tadaki Tokairin',
+  'op2': 'Contact: tadaki.tokairin@gmail.com',
+  'h3': 'Information We Collect',
+  'p3a': '<strong>Account Information</strong>',
+  'c1': 'Name or nickname', 'c2': 'Email address', 'c3': 'Job category (selected from 18 categories or free text)', 'c4': 'Country of employment',
+  'p3b': '<strong>Usage Information</strong>',
+  'c5': 'Chat messages (for translation processing)',
+  'c6': 'Voice data (converted to text and stored in chat room; raw voice data deleted immediately after conversion)',
+  'c7': 'Images and files (stored and displayed in chat room; OCR processing performed when OCR feature is used)',
+  'c8': 'Point purchase and consumption history', 'c9': 'App usage data',
+  'c10': 'Watermarked screenshots at time of report (accessible only by operator)',
+  'c11': 'Device information at time of report (model and OS version)',
+  'h4': 'Purpose of Use',
+  'u1': 'Providing translation, AI, voice, and OCR features', 'u2': 'Point management and payment processing',
+  'u3': 'App improvement and new feature development', 'u4': 'Customer support',
+  'u5': 'Analysis and improvement of job category and country data (after anonymization)',
+  'u6': 'Accumulation and utilization of job-specific knowledge data (after anonymization)',
+  'u7': 'Prevention of unauthorized use and harassment', 'u8': 'Review and response to reports',
+  'h5': 'Third-Party Services',
+  'p5': 'The App uses the following third-party services, and their respective privacy policies apply.',
+  't1': 'Google Firebase (data storage, authentication, notifications)',
+  't2': 'Google Firebase Storage (storage of images, files, and screenshots)',
+  't3': 'Google Translate API (translation feature)', 't4': 'Google Cloud Vision API (OCR feature)',
+  't5': 'Google Text-to-Speech API (voice output)', 't6': 'Google Speech-to-Text API (voice input)',
+  't7': 'OpenAI API (AI assistant feature)', 't8': 'Gemini API (AI assistant feature)',
+  't9': 'Apple App Store / Google Play Store (payment processing)',
+  'h6': 'Data Storage Location',
+  'd1': 'Firestore data (account info, chat messages, etc.): Google Firebase (asia-northeast1: Tokyo region)',
+  'd2': 'Firebase Storage (images, files, screenshots, etc.): Google Firebase Storage (asia-northeast1: Tokyo region)',
+  'd3': 'PDF files for OCR processing: Temporarily stored in Google Firebase Storage (asia: Asia multi-region); deleted immediately after processing.',
+  'h7': 'Data Retention Period',
+  'r1': 'Account information: 3 months after account deletion', 'r2': 'Chat messages: Duration of account',
+  'r3': 'Images and files: Duration of chat room',
+  'r4': 'Voice data: Deleted immediately after text conversion; converted text stored for duration of chat room',
+  'r5': 'PDF files for OCR processing: Deleted immediately after processing',
+  'r6': 'Point purchase history: 7 years in accordance with applicable laws',
+  'r7': 'Reported screenshots: 6 months after case resolution',
+  'r8': 'Job category and country data: Stored indefinitely after anonymization',
+  'h8': 'Watermarked Screenshots',
+  'p8a': 'When a user takes a screenshot within a chat room, a watermark containing the following information is automatically applied.',
+  'w1': 'App name', 'w2': 'Chat room ID', 'w3': 'User ID', 'w4': 'Date and time of capture',
+  'p8b': 'This screenshot is simultaneously saved to Google Firebase Storage (asia-northeast1: Tokyo region) and used as evidence in the event of a report. Saved screenshots are accessible only by the operator.',
+  'h9': 'User Rights',
+  'ri1': 'Right to request disclosure of personal information', 'ri2': 'Right to correct or delete personal information',
+  'ri3': 'Right to export data', 'ri4': 'Right to delete account',
+  'ri5': 'Right to opt out of job-category knowledge data utilization',
+  'p9': 'Please contact us via the inquiry form.',
+  'h10': 'Use of Job Category and Country Data',
+  'p10a': 'Job category and country data provided at registration will be anonymized and used for the following purposes.',
+  'kd1': 'Improving AI assistant accuracy', 'kd2': 'Building a job-category-specific knowledge database',
+  'kd3': 'Providing information to users in the same job category worldwide',
+  'kd4': 'Service improvement and new feature development',
+  'p10b': 'Users may opt out of this feature through the App settings.',
+  'h11': 'Reporting System',
+  'p11a': 'If a user determines that a message is problematic, they may use the reporting feature. The following information will be sent to the operator.',
+  'rp1': 'Watermarked screenshot', 'rp2': 'Reason for report', 'rp3': "Reporter's user ID",
+  'rp4': 'Date and time of report', 'rp5': 'Device information (model and OS version)',
+  'p11b': "The reporter's information will not be disclosed to the reported user. The operator will review and take appropriate action.",
+  'h12': "Children's Privacy",
+  'p12': 'The App is not intended for users under the age of 16. If we become aware that we have unintentionally collected personal information from anyone under 16, we will promptly delete it.',
+  'h13': 'Security',
+  'p13': 'We implement industry-standard security measures to protect personal information. However, we cannot guarantee complete security over the internet.',
+  'h14': 'Governing Law and Jurisdiction',
+  'p14': 'This Policy is governed by the laws of Japan. In the event of a dispute, the Tokyo District Court shall have exclusive jurisdiction as the court of first instance.',
+  'h15': 'Changes to This Privacy Policy',
+  'p15': 'This Policy may be updated without prior notice. In the event of significant changes, users will be notified within the App.',
+  'h16': 'Contact Us',
+  'ct1': 'Email: tadaki.tokairin@gmail.com',
+  'fl-top': 'Top Page', 'fl-terms': 'Terms of Use', 'fl-contact': 'Contact Us',
+};
+
+function setLang(l) {
+  const d = l === 'ja' ? ja : en;
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector(`.lang-btn[onclick="setLang('${l}')"]`).classList.add('active');
+  Object.entries(d).forEach(([id, val]) => {
+    const el = document.getElementById(id);
+    if (el) el.innerHTML = val;
+  });
+}
+</script>
+</body>
+</html>
