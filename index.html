@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TransWorks - 言語の壁を越えて、職場のコミュニケーションをスムーズに。130言語以上対応の多言語コミュニケーションアプリ。">
+  <title>TransWorks - 多言語職場コミュニケーションアプリ</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, 'SF Pro Display', 'Helvetica Neue', sans-serif; background: #eaecf8; color: #1d1d1f; }
+
+    /* Lang Toggle */
+    .lang-toggle { display: flex; gap: 8px; justify-content: center; padding: 20px; position: relative; z-index: 10; }
+    .lang-btn { background: rgba(255,255,255,0.45); border-top: 1px solid rgba(255,255,255,0.95); border-left: 1px solid rgba(255,255,255,0.8); border-right: 1px solid rgba(255,255,255,0.2); border-bottom: 1px solid rgba(255,255,255,0.35); color: rgba(0,0,0,0.4); padding: 5px 14px; border-radius: 20px; font-size: 12px; cursor: pointer; backdrop-filter: blur(12px); }
+    .lang-btn.active { background: rgba(255,255,255,0.7); color: rgba(0,0,0,0.7); }
+
+    /* Hero */
+    .hero-wrap { position: relative; min-height: 580px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 40px 24px 60px; }
+    .bg-art { position: absolute; inset: 0; z-index: 0; }
+    .bg-art svg { width: 100%; height: 100%; object-fit: cover; }
+    .fg { position: relative; z-index: 2; text-align: center; width: 100%; }
+
+    .badge { display: inline-block; padding: 6px 18px; border-radius: 30px; font-size: 11px; letter-spacing: 2px; color: rgba(0,0,0,0.4); background: rgba(255,255,255,0.5); border-top: 1px solid rgba(255,255,255,0.95); border-left: 1px solid rgba(255,255,255,0.8); border-right: 1px solid rgba(255,255,255,0.25); border-bottom: 1px solid rgba(255,255,255,0.4); backdrop-filter: blur(16px); box-shadow: 0 2px 8px rgba(0,0,0,0.05), inset 0 1px 0 rgba(255,255,255,0.9); margin-bottom: 28px; }
+
+    .hero-svg { max-width: 620px; display: block; margin: 0 auto 24px; width: 100%; }
+    .hero-tagline { font-size: 18px; font-weight: 300; color: rgba(0,0,0,0.38); letter-spacing: 3px; margin-bottom: 32px; }
+    .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+    .btn-dark { background: rgba(0,0,0,0.82); color: #fff; padding: 14px 32px; border-radius: 50px; font-size: 15px; font-weight: 500; border: none; cursor: pointer; letter-spacing: 0.3px; }
+    .btn-lg { display: inline-flex; align-items: center; gap: 9px; padding: 14px 28px; border-radius: 50px; font-size: 15px; font-weight: 500; cursor: pointer; background: rgba(255,255,255,0.45); color: rgba(0,0,0,0.6); border-top: 1px solid rgba(255,255,255,0.95); border-left: 1px solid rgba(255,255,255,0.75); border-right: 1px solid rgba(255,255,255,0.2); border-bottom: 1px solid rgba(255,255,255,0.35); backdrop-filter: blur(16px); box-shadow: 0 2px 8px rgba(0,0,0,0.05), inset 0 1px 0 rgba(255,255,255,0.85); }
+    .btn-lg svg { width: 16px; height: 16px; fill: currentColor; }
+
+    /* Glass Cards */
+    .lg-card { background: rgba(255,255,255,0.42); backdrop-filter: blur(28px) saturate(180%); -webkit-backdrop-filter: blur(28px) saturate(180%); border-radius: 22px; border-top: 1px solid rgba(255,255,255,0.98); border-left: 1px solid rgba(255,255,255,0.8); border-right: 1px solid rgba(255,255,255,0.3); border-bottom: 1px solid rgba(255,255,255,0.5); box-shadow: 0 8px 32px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04), inset 0 1px 0 rgba(255,255,255,0.9); }
+    .lg-card-sm { background: rgba(255,255,255,0.35); backdrop-filter: blur(20px) saturate(160%); -webkit-backdrop-filter: blur(20px) saturate(160%); border-radius: 18px; border-top: 1px solid rgba(255,255,255,0.92); border-left: 1px solid rgba(255,255,255,0.72); border-right: 1px solid rgba(255,255,255,0.25); border-bottom: 1px solid rgba(255,255,255,0.4); box-shadow: 0 4px 20px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.85); }
+
+    /* Sections */
+    .section { padding: 64px 24px; }
+    .section-inner { max-width: 880px; margin: 0 auto; }
+    .alt-bg { background: rgba(255,255,255,0.2); }
+    .section-label { font-size: 11px; letter-spacing: 2px; color: rgba(0,0,0,0.3); margin-bottom: 10px; text-transform: uppercase; }
+    .section-title { font-size: 30px; font-weight: 500; color: #1d1d1f; margin-bottom: 12px; letter-spacing: -0.5px; }
+    .section-desc { font-size: 15px; color: rgba(0,0,0,0.45); line-height: 1.8; max-width: 520px; }
+    .divider { border: none; border-top: 0.5px solid rgba(0,0,0,0.05); }
+
+    /* Features */
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 36px; }
+    .feat { padding: 22px; }
+    .feat-icon { width: 38px; height: 38px; border-radius: 10px; background: rgba(0,0,0,0.05); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; border: 0.5px solid rgba(0,0,0,0.06); }
+    .feat-icon svg { width: 18px; height: 18px; fill: rgba(0,0,0,0.55); }
+    .feat h3 { font-size: 14px; font-weight: 500; color: #1d1d1f; margin-bottom: 5px; }
+    .feat p { font-size: 13px; color: rgba(0,0,0,0.42); line-height: 1.6; }
+
+    /* Stats */
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 36px; }
+    .stat { padding: 24px 16px; text-align: center; }
+    .stat-n { font-size: 36px; font-weight: 500; color: #1d1d1f; letter-spacing: -1px; }
+    .stat-l { font-size: 11px; color: rgba(0,0,0,0.35); margin-top: 4px; letter-spacing: 0.5px; }
+
+    /* Flow */
+    .flow { display: flex; flex-direction: column; gap: 10px; margin-top: 36px; }
+    .flow-item { display: flex; gap: 18px; align-items: flex-start; padding: 20px 22px; }
+    .flow-num { width: 30px; height: 30px; border-radius: 50%; background: rgba(0,0,0,0.05); border: 0.5px solid rgba(0,0,0,0.08); display: flex; align-items: center; justify-content: center; font-size: 12px; color: rgba(0,0,0,0.45); flex-shrink: 0; font-weight: 500; }
+    .flow-item h3 { font-size: 14px; font-weight: 500; color: #1d1d1f; margin-bottom: 4px; }
+    .flow-item p { font-size: 13px; color: rgba(0,0,0,0.42); line-height: 1.6; }
+
+    /* Pricing */
+    .pricing { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin-top: 36px; }
+    .price-card { padding: 26px 22px; }
+    .price-badge { display: inline-block; font-size: 11px; padding: 3px 10px; border-radius: 20px; background: rgba(0,0,0,0.05); color: rgba(0,0,0,0.45); margin-bottom: 10px; }
+    .price-card h3 { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.45); margin-bottom: 8px; }
+    .price-num { font-size: 30px; font-weight: 500; color: #1d1d1f; letter-spacing: -1px; }
+    .price-num span { font-size: 13px; font-weight: 400; color: rgba(0,0,0,0.35); }
+    .price-list { list-style: none; margin-top: 14px; display: flex; flex-direction: column; gap: 8px; }
+    .price-list li { font-size: 13px; color: rgba(0,0,0,0.42); display: flex; gap: 8px; }
+    .price-list li::before { content: '—'; color: rgba(0,0,0,0.18); flex-shrink: 0; }
+
+    /* CTA */
+    .cta-wrap { padding: 60px 24px; text-align: center; }
+    .cta-box { max-width: 520px; margin: 0 auto; padding: 48px 40px; }
+    .cta-box h2 { font-size: 26px; font-weight: 500; color: #1d1d1f; margin-bottom: 10px; letter-spacing: -0.5px; }
+    .cta-box p { font-size: 15px; color: rgba(0,0,0,0.42); margin-bottom: 28px; line-height: 1.7; }
+    .store-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+    /* Footer */
+    .footer { padding: 28px 24px; text-align: center; background: rgba(255,255,255,0.3); backdrop-filter: blur(10px); border-top: 0.5px solid rgba(255,255,255,0.6); }
+    .footer-links { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-bottom: 10px; }
+    .footer-links a { font-size: 13px; color: rgba(0,0,0,0.3); text-decoration: none; }
+    .footer-links a:hover { color: rgba(0,0,0,0.6); }
+    .footer-copy { font-size: 12px; color: rgba(0,0,0,0.2); }
+
+    @media (max-width: 600px) {
+      .hero-tagline { font-size: 14px; letter-spacing: 2px; }
+      .section-title { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute;">
+  <defs>
+    <filter id="distort-bg" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.018 0.012" numOctaves="4" seed="8" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="30" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="glass-refract" x="-15%" y="-15%" width="130%" height="130%" color-interpolation-filters="sRGB">
+      <feTurbulence type="turbulence" baseFrequency="0.022 0.016" numOctaves="3" seed="22" result="noise2"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise2" scale="22" xChannelSelector="R" yChannelSelector="B" result="refracted"/>
+      <feGaussianBlur in="refracted" stdDeviation="0.3"/>
+    </filter>
+    <filter id="spec" x="-5%" y="-5%" width="110%" height="110%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"/>
+      <feSpecularLighting in="blur" surfaceScale="8" specularConstant="2.8" specularExponent="45" result="spec" lighting-color="white">
+        <fePointLight x="160" y="50" z="160"/>
+      </feSpecularLighting>
+      <feComposite in="spec" in2="SourceAlpha" operator="in" result="specOut"/>
+      <feBlend in="SourceGraphic" in2="specOut" mode="screen"/>
+    </filter>
+    <filter id="spec-inner" x="-5%" y="-5%" width="110%" height="110%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur2"/>
+      <feSpecularLighting in="blur2" surfaceScale="5" specularConstant="3.5" specularExponent="60" result="spec2" lighting-color="white">
+        <fePointLight x="420" y="80" z="200"/>
+      </feSpecularLighting>
+      <feComposite in="spec2" in2="SourceAlpha" operator="in" result="specOut2"/>
+      <feBlend in="SourceGraphic" in2="specOut2" mode="screen"/>
+    </filter>
+    <filter id="shadow-text" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="rgba(0,0,0,0.18)"/>
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="rgba(0,0,0,0.12)"/>
+    </filter>
+    <linearGradient id="txt-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(8,8,16,0.92)"/>
+      <stop offset="18%" stop-color="rgba(20,20,35,0.75)"/>
+      <stop offset="45%" stop-color="rgba(60,60,90,0.4)"/>
+      <stop offset="70%" stop-color="rgba(100,100,140,0.2)"/>
+      <stop offset="100%" stop-color="rgba(130,130,165,0.28)"/>
+    </linearGradient>
+    <linearGradient id="hilight-top" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.85)"/>
+      <stop offset="30%" stop-color="rgba(255,255,255,0.4)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+    <linearGradient id="hilight-mid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.6)"/>
+      <stop offset="35%" stop-color="rgba(255,255,255,0.25)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+    <linearGradient id="card-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.62)"/>
+      <stop offset="50%" stop-color="rgba(255,255,255,0.32)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.48)"/>
+    </linearGradient>
+    <radialGradient id="card-glow" cx="50%" cy="5%" r="70%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.55)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </radialGradient>
+    <clipPath id="ct">
+      <text x="310" y="178" text-anchor="middle" font-size="130" font-weight="900" font-family="-apple-system,sans-serif" letter-spacing="-6">Trans</text>
+    </clipPath>
+    <clipPath id="cw">
+      <text x="310" y="308" text-anchor="middle" font-size="130" font-weight="900" font-family="-apple-system,sans-serif" letter-spacing="-6">Works</text>
+    </clipPath>
+  </defs>
+</svg>
+
+<div class="lang-toggle">
+  <button class="lang-btn active" onclick="setLang('ja')">日本語</button>
+  <button class="lang-btn" onclick="setLang('en')">English</button>
+</div>
+
+<!-- Hero -->
+<div class="hero-wrap">
+  <div class="bg-art">
+    <svg viewBox="0 0 800 580" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="bg-r1" cx="18%" cy="28%" r="48%"><stop offset="0%" stop-color="#bbd0f8"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+        <radialGradient id="bg-r2" cx="82%" cy="72%" r="44%"><stop offset="0%" stop-color="#d4bef5"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+        <radialGradient id="bg-r3" cx="58%" cy="18%" r="36%"><stop offset="0%" stop-color="#b8e8d0"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+        <radialGradient id="bg-r4" cx="12%" cy="82%" r="32%"><stop offset="0%" stop-color="#f5d8c0"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+        <radialGradient id="bg-r5" cx="90%" cy="15%" r="28%"><stop offset="0%" stop-color="#f0c8d8"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+      </defs>
+      <rect width="800" height="580" fill="#eaecf8"/>
+      <rect width="800" height="580" fill="url(#bg-r1)" opacity="0.8"/>
+      <rect width="800" height="580" fill="url(#bg-r2)" opacity="0.7"/>
+      <rect width="800" height="580" fill="url(#bg-r3)" opacity="0.6"/>
+      <rect width="800" height="580" fill="url(#bg-r4)" opacity="0.5"/>
+      <rect width="800" height="580" fill="url(#bg-r5)" opacity="0.5"/>
+      <circle cx="400" cy="290" r="200" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="70" filter="url(#distort-bg)"/>
+      <circle cx="180" cy="160" r="110" fill="none" stroke="rgba(190,210,250,0.55)" stroke-width="45" filter="url(#distort-bg)"/>
+      <circle cx="640" cy="420" r="140" fill="none" stroke="rgba(200,185,250,0.45)" stroke-width="55" filter="url(#distort-bg)"/>
+    </svg>
+  </div>
+
+  <div class="fg">
+    <div class="badge" id="badge">多言語職場コミュニケーション</div>
+
+    <svg class="hero-svg" viewBox="0 0 620 340" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="620" height="340" rx="28" fill="url(#card-bg)" filter="url(#shadow-text)"/>
+      <rect x="0" y="0" width="620" height="340" rx="28" fill="url(#card-glow)"/>
+      <rect x="0.5" y="0.5" width="619" height="339" rx="27.5" fill="none" stroke="rgba(255,255,255,0.98)" stroke-width="1.2"/>
+      <rect x="2" y="2" width="616" height="45" rx="4" fill="rgba(255,255,255,0.55)" opacity="0.7"/>
+      <rect x="0.5" y="0.5" width="2.5" height="338" rx="1" fill="rgba(255,255,255,0.75)"/>
+      <rect x="617" y="0.5" width="2.5" height="338" rx="1" fill="rgba(255,255,255,0.22)"/>
+
+      <text x="310" y="60" text-anchor="middle" font-size="11" font-weight="400" font-family="-apple-system,sans-serif" letter-spacing="3.5" fill="rgba(0,0,0,0.25)">MULTILINGUAL WORKPLACE COMMUNICATION</text>
+
+      <text x="310" y="178" text-anchor="middle" font-size="130" font-weight="900" font-family="-apple-system,sans-serif" letter-spacing="-6" fill="url(#txt-grad)" filter="url(#shadow-text)">Trans</text>
+      <text x="310" y="178" text-anchor="middle" font-size="130" font-weight="900" font-family="-apple-system,sans-serif" letter-spacing="-6" fill="url(#txt-grad)" filter="url(#spec)">Trans</text>
+      <rect x="0" y="0" width="620" height="195" fill="url(#hilight-top)" clip-path="url(#ct)"/>
+      <text x="310" y="178" text-anchor="middle" font-size="130" font-weight="900" font-family="-apple-system,sans-serif" letter-spacing="-6" fill="none" stroke="rgba(255,255,255,0.75)" stroke-width="0.8" filter="url(#glass-refract)">Trans</text>
+      <text x="310" y="178" text-anchor="middle" font-size="130" font-weight="900" font-family="-apple-system,sans-serif" letter-spacing="-6" fill="none" stroke="rgba(255,255,255,0.75)" stroke-width="0.8" filter="url(#spec-inner)">Trans</text>
+
+      <text x="310" y="308" text-anchor="middle" font-size="130" font-weight="900" font-family="-apple-system,sans-serif" letter-spacing="-6" fill="url(#txt-grad)" filter="url(#shadow-text)">Works</text>
+      <text x="310" y="308" text-anchor="middle" font-size="130" font-weight="900" font-family="-apple-system,sans-serif" letter-spacing="-6" fill="url(#txt-grad)" filter="url(#spec)">Works</text>
+      <rect x="0" y="148" width="620" height="200" fill="url(#hilight-mid)" clip-path="url(#cw)"/>
+      <text x="310" y="308" text-anchor="middle" font-size="130" font-weight="900" font-family="-apple-system,sans-serif" letter-spacing="-6" fill="none" stroke="rgba(255,255,255,0.65)" stroke-width="0.8" filter="url(#glass-refract)">Works</text>
+      <text x="310" y="308" text-anchor="middle" font-size="130" font-weight="900" font-family="-apple-system,sans-serif" letter-spacing="-6" fill="none" stroke="rgba(255,255,255,0.65)" stroke-width="0.8" filter="url(#spec-inner)">Works</text>
+
+      <ellipse cx="310" cy="7" rx="200" ry="6" fill="rgba(255,255,255,0.55)" style="filter:blur(3px)"/>
+      <ellipse cx="310" cy="333" rx="180" ry="5" fill="rgba(255,255,255,0.25)" style="filter:blur(2px)"/>
+    </svg>
+
+    <p class="hero-tagline" id="hero-tagline">言語の壁を、越えよう。</p>
+    <div class="hero-btns">
+      <button class="btn-dark" id="btn-download">無料でダウンロード</button>
+      <button class="btn-lg" id="btn-learn">詳しく見る</button>
+    </div>
+  </div>
+</div>
+
+<!-- Features -->
+<div class="section alt-bg">
+  <div class="section-inner">
+    <p class="section-label" id="feat-label">主な機能</p>
+    <h2 class="section-title" id="feat-title">職場に必要な機能が、すべて揃っています。</h2>
+    <p class="section-desc" id="feat-desc">翻訳・AI・音声・OCRをひとつのアプリに統合。使った分だけの従量課金で対応します。</p>
+    <div class="features">
+      <div class="feat lg-card-sm">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg></div>
+        <h3 id="f1-title">130言語以上のリアルタイム翻訳</h3>
+        <p id="f1-desc">Google翻訳APIを活用。メッセージが自動的に相手の言語に翻訳されて届きます。</p>
+      </div>
+      <div class="feat lg-card-sm">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg></div>
+        <h3 id="f2-title">チーム共有型AIアシスタント</h3>
+        <p id="f2-desc">現場の疑問をAIに質問。回答はチームに共有され、熟練者が補足できます。</p>
+      </div>
+      <div class="feat lg-card-sm">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/></svg></div>
+        <h3 id="f3-title">音声入出力・会話モード</h3>
+        <p id="f3-desc">話しかけるだけでメッセージ送信。会話モードで同僚との親交を深められます。</p>
+      </div>
+      <div class="feat lg-card-sm">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+        <h3 id="f4-title">アナウンス機能</h3>
+        <p id="f4-desc">専用アナウンスルームが自動生成。重要な連絡が会話に埋もれません。</p>
+      </div>
+      <div class="feat lg-card-sm">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg></div>
+        <h3 id="f5-title">OCRテキスト翻訳</h3>
+        <p id="f5-desc">書類や掲示物を撮影するだけでテキストを認識・翻訳します。</p>
+      </div>
+      <div class="feat lg-card-sm">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg></div>
+        <h3 id="f6-title">言語習得サポート</h3>
+        <p id="f6-desc">タップで翻訳後を、ダブルタップで原文を読み上げ。自然に現地語が身につきます。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- Stats -->
+<div class="section">
+  <div class="section-inner">
+    <p class="section-label" id="stats-label">数字で見る</p>
+    <h2 class="section-title" id="stats-title">TransWorksの実力</h2>
+    <div class="stats">
+      <div class="stat lg-card"><div class="stat-n">130+</div><div class="stat-l" id="s1">対応言語数</div></div>
+      <div class="stat lg-card"><div class="stat-n">¥800</div><div class="stat-l" id="s2">月額サブスクリプション</div></div>
+      <div class="stat lg-card"><div class="stat-n">18</div><div class="stat-l" id="s3">職種カテゴリー</div></div>
+      <div class="stat lg-card"><div class="stat-n">¥0</div><div class="stat-l" id="s4">外国人スタッフの利用料金</div></div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- How -->
+<div class="section alt-bg">
+  <div class="section-inner">
+    <p class="section-label" id="how-label">使い方</p>
+    <h2 class="section-title" id="how-title">3ステップで始められます。</h2>
+    <div class="flow">
+      <div class="flow-item lg-card-sm"><div class="flow-num">1</div><div><h3 id="h1-title">アプリをダウンロード</h3><p id="h1-desc">App StoreまたはGoogle Playから無料でダウンロード。外国人スタッフへの費用は一切かかりません。</p></div></div>
+      <div class="flow-item lg-card-sm"><div class="flow-num">2</div><div><h3 id="h2-title">チャットルームを作成</h3><p id="h2-desc">オーナーがチャットルームを作成してメンバーを招待。アナウンスルームが自動生成されます。</p></div></div>
+      <div class="flow-item lg-card-sm"><div class="flow-num">3</div><div><h3 id="h3-title">言語の壁なく会話開始</h3><p id="h3-desc">各メンバーが自分の言語でメッセージを送るだけ。リアルタイムで相手の言語に翻訳されます。</p></div></div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- Pricing -->
+<div class="section">
+  <div class="section-inner">
+    <p class="section-label" id="price-label">料金プラン</p>
+    <h2 class="section-title" id="price-title">シンプルな従量課金制</h2>
+    <p class="section-desc" id="price-desc">チャットルームのオーナーが利用分をまとめて負担。外国人スタッフは無料で利用できます。</p>
+    <div class="pricing">
+      <div class="price-card lg-card-sm">
+        <h3 id="p1-name">月額サブスクリプション</h3>
+        <div class="price-num">¥800<span id="p1-per"> / 月</span></div>
+        <ul class="price-list"><li id="p1-1">基本チャット機能</li><li id="p1-2">初回2,660ポイント付与</li><li id="p1-3">翻訳・送受信</li></ul>
+      </div>
+      <div class="price-card lg-card">
+        <div class="price-badge" id="p2-badge">おすすめ</div>
+        <h3 id="p2-name">ポイント追加購入</h3>
+        <div class="price-num">¥800〜<span id="p2-per"> / 都度</span></div>
+        <ul class="price-list"><li id="p2-1">¥800 → 4,250pt</li><li id="p2-2">¥1,600 → 8,500pt</li><li id="p2-3">¥4,800 → 25,500pt</li><li id="p2-4">¥8,000 → 42,500pt</li></ul>
+      </div>
+      <div class="price-card lg-card-sm">
+        <h3 id="p3-name">ポイント消費の目安</h3>
+        <div class="price-num" style="font-size:18px; margin-top:10px;">機能別</div>
+        <ul class="price-list"><li id="p3-1">AI画像認識：250pt / 回</li><li id="p3-2">OCR翻訳：125pt / 回</li><li id="p3-3">AIチャット：トークン×20</li><li id="p3-4">音声入出力：従量</li></ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-wrap">
+  <div class="cta-box lg-card">
+    <h2 id="dl-title">今すぐ始めましょう。</h2>
+    <p id="dl-desc">言語の壁のない職場環境を、TransWorksで実現してください。</p>
+    <div class="store-btns">
+      <button class="btn-lg">
+        <svg viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98l-.09.06c-.22.14-2.15 1.26-2.12 3.76.03 2.98 2.61 3.97 2.64 3.98l-.07.34zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        App Store
+      </button>
+      <button class="btn-lg">
+        <svg viewBox="0 0 24 24"><path d="M3.18 23.76c.3.17.64.24.99.2l.09-.05L13.65 12 3.26.09l-.08-.04a1.31 1.31 0 00-1.34.15C1.5.62 1.25 1.13 1.25 1.78v20.44c0 .65.25 1.16.69 1.48l.08.05zM16.34 8.9L5.55 2.83l8.47 8.8 2.32-2.73zm2.55 5.27c.42-.24.67-.64.67-1.17s-.25-.93-.67-1.17l-2.04-1.18-2.6 3.05 2.6 2.69 2.04-1.22zm-13.34 8l10.79-6.07-2.32-2.73-8.47 8.8z"/></svg>
+        Google Play
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <div class="footer-links">
+    <a href="privacy.html" id="link-privacy">プライバシーポリシー</a>
+    <a href="terms.html" id="link-terms">利用規約</a>
+    <a href="contact.html" id="link-contact">お問い合わせ</a>
+  </div>
+  <p class="footer-copy" id="footer-copy">© 2026 TransWorks. All rights reserved.</p>
+</div>
+
+<script>
+const ja = {
+  badge:'多言語職場コミュニケーション','hero-tagline':'言語の壁を、越えよう。','btn-download':'無料でダウンロード','btn-learn':'詳しく見る',
+  'feat-label':'主な機能','feat-title':'職場に必要な機能が、すべて揃っています。','feat-desc':'翻訳・AI・音声・OCRをひとつのアプリに統合。使った分だけの従量課金で対応します。',
+  'f1-title':'130言語以上のリアルタイム翻訳','f1-desc':'Google翻訳APIを活用。メッセージが自動的に相手の言語に翻訳されて届きます。',
+  'f2-title':'チーム共有型AIアシスタント','f2-desc':'現場の疑問をAIに質問。回答はチームに共有され、熟練者が補足できます。',
+  'f3-title':'音声入出力・会話モード','f3-desc':'話しかけるだけでメッセージ送信。会話モードで同僚との親交を深められます。',
+  'f4-title':'アナウンス機能','f4-desc':'専用アナウンスルームが自動生成。重要な連絡が会話に埋もれません。',
+  'f5-title':'OCRテキスト翻訳','f5-desc':'書類や掲示物を撮影するだけでテキストを認識・翻訳します。',
+  'f6-title':'言語習得サポート','f6-desc':'タップで翻訳後を、ダブルタップで原文を読み上げ。自然に現地語が身につきます。',
+  'stats-label':'数字で見る','stats-title':'TransWorksの実力',
+  's1':'対応言語数','s2':'月額サブスクリプション','s3':'職種カテゴリー','s4':'外国人スタッフの利用料金',
+  'how-label':'使い方','how-title':'3ステップで始められます。',
+  'h1-title':'アプリをダウンロード','h1-desc':'App StoreまたはGoogle Playから無料でダウンロード。外国人スタッフへの費用は一切かかりません。',
+  'h2-title':'チャットルームを作成','h2-desc':'オーナーがチャットルームを作成してメンバーを招待。アナウンスルームが自動生成されます。',
+  'h3-title':'言語の壁なく会話開始','h3-desc':'各メンバーが自分の言語でメッセージを送るだけ。リアルタイムで相手の言語に翻訳されます。',
+  'price-label':'料金プラン','price-title':'シンプルな従量課金制','price-desc':'チャットルームのオーナーが利用分をまとめて負担。外国人スタッフは無料で利用できます。',
+  'p1-name':'月額サブスクリプション','p1-per':' / 月','p1-1':'基本チャット機能','p1-2':'初回2,660ポイント付与','p1-3':'翻訳・送受信',
+  'p2-badge':'おすすめ','p2-name':'ポイント追加購入','p2-per':' / 都度',
+  'p2-1':'¥800 → 4,250pt','p2-2':'¥1,600 → 8,500pt','p2-3':'¥4,800 → 25,500pt','p2-4':'¥8,000 → 42,500pt',
+  'p3-name':'ポイント消費の目安','p3-1':'AI画像認識：250pt / 回','p3-2':'OCR翻訳：125pt / 回','p3-3':'AIチャット：トークン×20','p3-4':'音声入出力：従量',
+  'dl-title':'今すぐ始めましょう。','dl-desc':'言語の壁のない職場環境を、TransWorksで実現してください。',
+  'link-privacy':'プライバシーポリシー','link-terms':'利用規約','link-contact':'お問い合わせ',
+  'footer-copy':'© 2026 TransWorks. All rights reserved.',
+};
+const en = {
+  badge:'Multilingual Workplace Communication','hero-tagline':'Break the language barrier. At work.','btn-download':'Download for Free','btn-learn':'Learn More',
+  'feat-label':'Features','feat-title':'Everything your workplace needs.','feat-desc':'Translation, AI, voice, and OCR — all in one app. Pay only for what you use.',
+  'f1-title':'Real-time Translation in 130+ Languages','f1-desc':'Powered by Google Translate API. Messages are automatically translated into each recipient\'s language.',
+  'f2-title':'Team-shared AI Assistant','f2-desc':'Ask AI anything on the job. Responses are shared so experienced staff can add context.',
+  'f3-title':'Voice Input/Output & Conversation Mode','f3-desc':'Just speak to send a message. Switch to conversation mode to connect with colleagues.',
+  'f4-title':'Announcement Feature','f4-desc':'A dedicated announcement room is auto-created. Important messages never get buried.',
+  'f5-title':'OCR Text Translation','f5-desc':'Photograph documents or notices to recognize and translate text instantly.',
+  'f6-title':'Language Learning Support','f6-desc':'Tap to hear the translation, double-tap for the original. Learn naturally through daily use.',
+  'stats-label':'By the numbers','stats-title':'TransWorks at a glance',
+  's1':'Supported languages','s2':'Monthly subscription','s3':'Job categories','s4':'Cost for foreign workers',
+  'how-label':'How it works','how-title':'Get started in 3 steps.',
+  'h1-title':'Download the app','h1-desc':'Free on App Store or Google Play. No cost for foreign workers.',
+  'h2-title':'Create a chat room','h2-desc':'The owner creates a chat room and invites members. An announcement room is created automatically.',
+  'h3-title':'Start communicating','h3-desc':'Each member writes in their own language. Messages are translated in real time.',
+  'price-label':'Pricing','price-title':'Simple pay-as-you-go pricing','price-desc':'The chat room owner covers all costs. Foreign workers use TransWorks for free.',
+  'p1-name':'Monthly Subscription','p1-per':' / month','p1-1':'Core chat features','p1-2':'2,660 points on first month','p1-3':'Translation & messaging',
+  'p2-badge':'Recommended','p2-name':'Point Packs','p2-per':' / purchase',
+  'p2-1':'¥800 → 4,250 pts','p2-2':'¥1,600 → 8,500 pts','p2-3':'¥4,800 → 25,500 pts','p2-4':'¥8,000 → 42,500 pts',
+  'p3-name':'Point Usage Guide','p3-1':'AI Vision: 250 pts / use','p3-2':'OCR Translation: 125 pts / use','p3-3':'AI Chat: tokens × 20','p3-4':'Voice I/O: metered',
+  'dl-title':'Ready to get started?','dl-desc':'Build a workplace without language barriers with TransWorks.',
+  'link-privacy':'Privacy Policy','link-terms':'Terms of Use','link-contact':'Contact Us',
+  'footer-copy':'© 2026 TransWorks. All rights reserved.',
+};
+function setLang(l) {
+  const d = l==='ja' ? ja : en;
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelector(`.lang-btn[onclick="setLang('${l}')"]`).classList.add('active');
+  Object.entries(d).forEach(([id,val])=>{const el=document.getElementById(id);if(el)el.innerHTML=val;});
+}
+</script>
+</body>
+</html>
