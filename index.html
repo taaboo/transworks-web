@@ -23,7 +23,8 @@
     .badge { display: inline-block; padding: 6px 18px; border-radius: 30px; font-size: 11px; letter-spacing: 2px; color: rgba(0,0,0,0.62); background: rgba(255,255,255,0.5); border-top: 1px solid rgba(255,255,255,0.95); border-left: 1px solid rgba(255,255,255,0.8); border-right: 1px solid rgba(255,255,255,0.25); border-bottom: 1px solid rgba(255,255,255,0.4); backdrop-filter: blur(16px); box-shadow: 0 2px 8px rgba(0,0,0,0.05), inset 0 1px 0 rgba(255,255,255,0.9); margin-bottom: 28px; }
 
     .hero-svg { max-width: 620px; display: block; margin: 0 auto 24px; width: 100%; }
-    .hero-tagline { font-size: 18px; font-weight: 400; color: rgba(0,0,0,0.62); letter-spacing: 3px; margin-bottom: 32px; }
+    .hero-tagline { font-size: 18px; font-weight: 400; color: rgba(0,0,0,0.62); letter-spacing: 3px; margin-bottom: 8px; }
+    .hero-sub-tagline { font-size: 14px; font-weight: 300; color: rgba(0,0,0,0.5); letter-spacing: 1px; margin-bottom: 32px; font-style: italic; }
     .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
     .btn-dark { background: rgba(0,0,0,0.82); color: #fff; padding: 14px 32px; border-radius: 50px; font-size: 15px; font-weight: 500; border: none; cursor: pointer; letter-spacing: 0.3px; }
@@ -214,6 +215,7 @@
     </svg>
 
     <p class="hero-tagline" id="hero-tagline">言語の壁を超えて。</p>
+    <p class="hero-sub-tagline" id="hero-sub-tagline">Imagine everyone, chatting in their own words.</p>
     <div class="hero-btns">
       <button class="btn-dark" id="btn-download">ダウンロード</button>
       <button class="btn-lg" id="btn-learn">詳しく見る</button>
@@ -427,6 +429,7 @@
 const ja = {
   badge:'多言語チャットアプリ',
   'hero-tagline':'言語の壁を超えて。',
+  'hero-sub-tagline':'Imagine everyone, chatting in their own words.',
   'btn-download':'ダウンロード','btn-learn':'詳しく見る',
   'hero-svg-label':'MULTILINGUAL CHAT APP',
   'intro-label':'TransWorksとは','intro-title':'言語の壁を超えて、通じ合うために。',
