@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TransWorks - 言語の壁を越えて、職場のコミュニケーションをスムーズに。130言語以上対応の多言語コミュニケーションアプリ。">
-  <title>TransWorks - 多言語職場コミュニケーションアプリ</title>
+  <meta name="description" content="TransWorks - 言語の壁を超えて、コミュニケーションを支援する多言語チャットアプリ。">
+  <title>TransWorks - 多言語チャットアプリ</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, 'SF Pro Display', 'Helvetica Neue', sans-serif; background: #f8fafc; color: #1d1d1f; }
@@ -40,7 +40,7 @@
     .alt-bg { background: rgba(255,255,255,0.35); }
     .section-label { font-size: 11px; letter-spacing: 2px; color: rgba(0,0,0,0.55); margin-bottom: 10px; text-transform: uppercase; }
     .section-title { font-size: 30px; font-weight: 500; color: #1d1d1f; margin-bottom: 12px; letter-spacing: -0.5px; }
-    .section-desc { font-size: 15px; color: rgba(0,0,0,0.65); line-height: 1.8; max-width: 520px; }
+    .section-desc { font-size: 15px; color: rgba(0,0,0,0.65); line-height: 1.8; max-width: 620px; }
     .divider { border: none; border-top: 0.5px solid rgba(0,0,0,0.05); }
 
     /* Features */
@@ -51,29 +51,26 @@
     .feat h3 { font-size: 14px; font-weight: 500; color: #1d1d1f; margin-bottom: 5px; }
     .feat p { font-size: 13px; color: rgba(0,0,0,0.62); line-height: 1.6; }
 
-    /* Stats */
-    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 36px; }
-    .stat { padding: 24px 16px; text-align: center; }
-    .stat-n { font-size: 36px; font-weight: 500; color: #1d1d1f; letter-spacing: -1px; }
-    .stat-l { font-size: 11px; color: rgba(0,0,0,0.55); margin-top: 4px; letter-spacing: 0.5px; }
-
-    /* Flow */
-    .flow { display: flex; flex-direction: column; gap: 10px; margin-top: 36px; }
-    .flow-item { display: flex; gap: 18px; align-items: flex-start; padding: 20px 22px; }
-    .flow-num { width: 30px; height: 30px; border-radius: 50%; background: rgba(0,0,0,0.05); border: 0.5px solid rgba(0,0,0,0.08); display: flex; align-items: center; justify-content: center; font-size: 12px; color: rgba(0,0,0,0.65); flex-shrink: 0; font-weight: 500; }
-    .flow-item h3 { font-size: 14px; font-weight: 500; color: #1d1d1f; margin-bottom: 4px; }
-    .flow-item p { font-size: 13px; color: rgba(0,0,0,0.62); line-height: 1.6; }
+    /* Use Cases */
+    .use-cases { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin-top: 36px; }
+    .use-case { padding: 18px 22px; font-size: 13.5px; color: rgba(0,0,0,0.68); line-height: 1.65; }
 
     /* Pricing */
-    .pricing { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin-top: 36px; }
-    .price-card { padding: 26px 22px; }
-    .price-badge { display: inline-block; font-size: 11px; padding: 3px 10px; border-radius: 20px; background: rgba(0,0,0,0.05); color: rgba(0,0,0,0.6); margin-bottom: 10px; }
-    .price-card h3 { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.65); margin-bottom: 8px; }
-    .price-num { font-size: 30px; font-weight: 500; color: #1d1d1f; letter-spacing: -1px; }
-    .price-num span { font-size: 13px; font-weight: 400; color: rgba(0,0,0,0.55); }
-    .price-list { list-style: none; margin-top: 14px; display: flex; flex-direction: column; gap: 8px; }
-    .price-list li { font-size: 13px; color: rgba(0,0,0,0.62); display: flex; gap: 8px; }
-    .price-list li::before { content: '—'; color: rgba(0,0,0,0.3); flex-shrink: 0; }
+    .pricing-box { padding: 36px 32px; margin-top: 36px; }
+    .pricing-box p { font-size: 14.5px; color: rgba(0,0,0,0.68); line-height: 1.8; margin-bottom: 14px; }
+    .pricing-box p:last-child { margin-bottom: 0; }
+    .pricing-emphasis { font-size: 16px; color: #1d1d1f; font-weight: 500; }
+
+    /* Story (Background) */
+    .story { padding: 40px 32px; margin-top: 36px; }
+    .story p { font-size: 14.5px; color: rgba(0,0,0,0.7); line-height: 1.9; margin-bottom: 16px; }
+    .story p:last-child { margin-bottom: 0; }
+    .story-emphasis { font-weight: 500; color: #1d1d1f; font-size: 15.5px; }
+
+    /* Notes */
+    .notes { margin-top: 24px; padding: 20px 24px; background: rgba(0,0,0,0.02); border-radius: 12px; border: 0.5px solid rgba(0,0,0,0.05); }
+    .notes p { font-size: 12px; color: rgba(0,0,0,0.55); line-height: 1.7; margin-bottom: 10px; }
+    .notes p:last-child { margin-bottom: 0; }
 
     /* CTA */
     .cta-wrap { padding: 60px 24px; text-align: center; }
@@ -92,6 +89,7 @@
     @media (max-width: 600px) {
       .hero-tagline { font-size: 14px; letter-spacing: 2px; }
       .section-title { font-size: 24px; }
+      .story, .pricing-box { padding: 28px 22px; }
     }
   </style>
 </head>
@@ -187,7 +185,7 @@
   </div>
 
   <div class="fg">
-    <div class="badge" id="badge">多言語職場コミュニケーション</div>
+    <div class="badge" id="badge">多言語チャットアプリ</div>
 
     <svg class="hero-svg" viewBox="0 0 620 340" xmlns="http://www.w3.org/2000/svg">
       <rect x="0" y="0" width="620" height="340" rx="28" fill="url(#card-bg)" filter="url(#shadow-text)"/>
@@ -197,7 +195,7 @@
       <rect x="0.5" y="0.5" width="2.5" height="338" rx="1" fill="rgba(255,255,255,0.75)"/>
       <rect x="617" y="0.5" width="2.5" height="338" rx="1" fill="rgba(255,255,255,0.22)"/>
 
-      <text x="310" y="60" text-anchor="middle" font-size="11" font-weight="500" font-family="-apple-system,sans-serif" letter-spacing="3.5" fill="rgba(0,0,0,0.52)">MULTILINGUAL WORKPLACE COMMUNICATION</text>
+      <text x="310" y="60" text-anchor="middle" font-size="11" font-weight="500" font-family="-apple-system,sans-serif" letter-spacing="3.5" fill="rgba(0,0,0,0.52)" id="hero-svg-label">MULTILINGUAL CHAT APP</text>
 
       <text x="310" y="178" text-anchor="middle" font-size="130" font-weight="900" font-family="-apple-system,sans-serif" letter-spacing="-6" fill="url(#txt-grad)" filter="url(#shadow-text)">Trans</text>
       <text x="310" y="178" text-anchor="middle" font-size="130" font-weight="900" font-family="-apple-system,sans-serif" letter-spacing="-6" fill="url(#txt-grad)" filter="url(#spec)">Trans</text>
@@ -215,82 +213,81 @@
       <ellipse cx="310" cy="333" rx="180" ry="5" fill="rgba(255,255,255,0.25)" style="filter:blur(2px)"/>
     </svg>
 
-    <p class="hero-tagline" id="hero-tagline">言語の壁を、越えよう。</p>
+    <p class="hero-tagline" id="hero-tagline">言語の壁を超えて。</p>
     <div class="hero-btns">
-      <button class="btn-dark" id="btn-download">無料でダウンロード</button>
+      <button class="btn-dark" id="btn-download">ダウンロード</button>
       <button class="btn-lg" id="btn-learn">詳しく見る</button>
     </div>
   </div>
 </div>
 
-<!-- Features -->
+<!-- Intro -->
 <div class="section alt-bg">
   <div class="section-inner">
-    <p class="section-label" id="feat-label">主な機能</p>
-    <h2 class="section-title" id="feat-title">職場に必要な機能が、すべて揃っています。</h2>
-    <p class="section-desc" id="feat-desc">翻訳・AI・音声・OCRをひとつのアプリに統合。使った分だけの従量課金で対応します。</p>
+    <p class="section-label" id="intro-label">TransWorksとは</p>
+    <h2 class="section-title" id="intro-title">言語の壁を超えて、通じ合うために。</h2>
+    <p class="section-desc" id="intro-desc">TransWorksは、多言語チャットアプリです。言語の壁を超えて、コミュニケーションを支援します。自分の母国語で書いた言葉が、相手の母国語で届きます。世界中のどこにいる人とでも、自分の言葉のままで会話できます。</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- Features -->
+<div class="section">
+  <div class="section-inner">
+    <p class="section-label" id="feat-label">できること</p>
+    <h2 class="section-title" id="feat-title">必要なものが、揃っています。</h2>
     <div class="features">
       <div class="feat lg-card-sm">
-        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg></div>
-        <h3 id="f1-title">130言語以上のリアルタイム翻訳</h3>
-        <p id="f1-desc">Google翻訳APIを活用。メッセージが自動的に相手の言語に翻訳されて届きます。</p>
-      </div>
-      <div class="feat lg-card-sm">
-        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg></div>
-        <h3 id="f2-title">チーム共有型AIアシスタント</h3>
-        <p id="f2-desc">現場の疑問をAIに質問。回答はチームに共有され、熟練者が補足できます。</p>
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg></div>
+        <h3 id="f1-title">チャット</h3>
+        <p id="f1-desc">文字でやり取りします。書いた言葉は、相手の母国語に訳されて届きます。相手の言葉は、自分の母国語で読めます。</p>
       </div>
       <div class="feat lg-card-sm">
         <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/></svg></div>
-        <h3 id="f3-title">音声入出力・会話モード</h3>
-        <p id="f3-desc">話しかけるだけでメッセージ送信。会話モードで同僚との親交を深められます。</p>
+        <h3 id="f2-title">音声</h3>
+        <p id="f2-desc">話した言葉を、その場で訳します。声でやり取りができます。</p>
       </div>
       <div class="feat lg-card-sm">
-        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
-        <h3 id="f4-title">アナウンス機能</h3>
-        <p id="f4-desc">専用アナウンスルームが自動生成。重要な連絡が会話に埋もれません。</p>
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M9 3L7.17 5H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2h-3.17L15 3H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/></svg></div>
+        <h3 id="f3-title">写真の翻訳</h3>
+        <p id="f3-desc">契約書、看板、書類、ホワイトボード、メニュー。写真に撮ると、その中の文字を訳します。</p>
       </div>
       <div class="feat lg-card-sm">
-        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg></div>
-        <h3 id="f5-title">OCRテキスト翻訳</h3>
-        <p id="f5-desc">書類や掲示物を撮影するだけでテキストを認識・翻訳します。</p>
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M19 2H5c-1.11 0-2 .89-2 2v18l4-4h12c1.1 0 2-.9 2-2V4c0-1.11-.89-2-2-2zm-7 13h-2v-2h2v2zm2-5.41c-.61.61-.99 1.16-1.31 1.66-.13.21-.25.42-.36.65-.04.09-.07.19-.1.28-.12.35-.18.71-.21 1.08H10v-.5c0-.85.18-1.63.46-2.27.27-.62.65-1.18 1.07-1.66.25-.29.51-.55.78-.81.32-.31.61-.62.84-.96.23-.34.36-.71.36-1.12 0-.59-.23-1.13-.61-1.51-.39-.39-.91-.61-1.5-.61-.59 0-1.11.22-1.5.61-.38.38-.61.92-.61 1.51H7.28c0-1.5.62-2.84 1.62-3.81C9.91 5.39 11.18 5 12.5 5c1.32 0 2.59.39 3.6 1.18 1 .97 1.62 2.31 1.62 3.81 0 .85-.18 1.59-.5 2.26-.32.66-.74 1.25-1.25 1.83-.45.5-.97.96-1.49 1.4z"/></svg></div>
+        <h3 id="f4-title">わからないことを訊く</h3>
+        <p id="f4-desc">チームで使うAIに、母国語で訊けます。仕事の専門用語、過去のやり取り、業務の流れを踏まえて答えます。</p>
       </div>
       <div class="feat lg-card-sm">
-        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg></div>
-        <h3 id="f6-title">言語習得サポート</h3>
-        <p id="f6-desc">タップで翻訳後を、ダブルタップで原文を読み上げ。自然に現地語が身につきます。</p>
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M3 4l9 16 2.5-7L21 11 3 4z"/></svg></div>
+        <h3 id="f5-title">大事な連絡を、残す</h3>
+        <p id="f5-desc">大事なメッセージは、アナウンスに投稿できます。投稿された内容は、後から参加した人にも、母国語で表示されます。</p>
+      </div>
+      <div class="feat lg-card-sm">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></div>
+        <h3 id="f6-title">他のルームへ、伝える</h3>
+        <p id="f6-desc">取締役会議のルーム ↔ 部長会議のルーム。組織の階層に沿った情報の流れを作れます。<sup>※1</sup></p>
+      </div>
+      <div class="feat lg-card-sm">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg></div>
+        <h3 id="f7-title">ハラスメントを感じたとき</h3>
+        <p id="f7-desc">画面をダブルタップすると、その画面が記録として、あなたと運営側に保存されます。<sup>※2</sup></p>
+      </div>
+      <div class="feat lg-card-sm">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg></div>
+        <h3 id="f8-title">少しずつ、相手の言葉を覚える</h3>
+        <p id="f8-desc">タップすると訳が、ダブルタップすると元の発音が、聞けます。使っているうちに、相手の言葉が自然に身についていきます。</p>
+      </div>
+      <div class="feat lg-card-sm">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M9 4v3h5v12h3V7h5V4H9zm-6 8h3v7h3v-7h3V9H3v3z"/></svg></div>
+        <h3 id="f9-title">読みやすく</h3>
+        <p id="f9-desc">文字の大きさを変えられます。読み上げもできます。</p>
       </div>
     </div>
-  </div>
-</div>
 
-<hr class="divider">
-
-<!-- Stats -->
-<div class="section">
-  <div class="section-inner">
-    <p class="section-label" id="stats-label">数字で見る</p>
-    <h2 class="section-title" id="stats-title">TransWorksの実力</h2>
-    <div class="stats">
-      <div class="stat lg-card"><div class="stat-n">130+</div><div class="stat-l" id="s1">対応言語数</div></div>
-      <div class="stat lg-card"><div class="stat-n">¥800</div><div class="stat-l" id="s2">月額サブスクリプション</div></div>
-      <div class="stat lg-card"><div class="stat-n">18</div><div class="stat-l" id="s3">職種カテゴリー</div></div>
-      <div class="stat lg-card"><div class="stat-n">¥0</div><div class="stat-l" id="s4">外国人スタッフの利用料金</div></div>
-    </div>
-  </div>
-</div>
-
-<hr class="divider">
-
-<!-- How -->
-<div class="section alt-bg">
-  <div class="section-inner">
-    <p class="section-label" id="how-label">使い方</p>
-    <h2 class="section-title" id="how-title">3ステップで始められます。</h2>
-    <div class="flow">
-      <div class="flow-item lg-card-sm"><div class="flow-num">1</div><div><h3 id="h1-title">アプリをダウンロード</h3><p id="h1-desc">App StoreまたはGoogle Playから無料でダウンロード。外国人スタッフへの費用は一切かかりません。</p></div></div>
-      <div class="flow-item lg-card-sm"><div class="flow-num">2</div><div><h3 id="h2-title">チャットルームを作成</h3><p id="h2-desc">オーナーがチャットルームを作成してメンバーを招待。アナウンスルームが自動生成されます。</p></div></div>
-      <div class="flow-item lg-card-sm"><div class="flow-num">3</div><div><h3 id="h3-title">言語の壁なく会話開始</h3><p id="h3-desc">各メンバーが自分の言語でメッセージを送るだけ。リアルタイムで相手の言語に翻訳されます。</p></div></div>
+    <div class="notes">
+      <p id="note1">※1 取締役会議のルームで話された内容のうち、自分の部署に必要なメッセージを、部長が自分の部署のルームに転送できます。このように、組織の階層をまたいで、情報を流せます。転送するとき、元のメッセージは画像として残り、編集できません。転送先のメンバーには、それぞれの母国語に翻訳された内容も、並んで表示されます。</p>
+      <p id="note2">※2 記録には、ルームのID、相手のID、時刻のウォーターマークが刻まれます。</p>
     </div>
   </div>
 </div>
@@ -298,28 +295,102 @@
 <hr class="divider">
 
 <!-- Pricing -->
+<div class="section alt-bg">
+  <div class="section-inner">
+    <p class="section-label" id="price-label">料金について</p>
+    <h2 class="section-title" id="price-title">招待されたメンバーは、無料です。</h2>
+    <div class="pricing-box lg-card">
+      <p id="price-desc1">チャットルームのオーナーが、料金を支払います。</p>
+      <p id="price-desc2">オーナーが月額の利用料金とポイントを購入すると、そのチャットルームのメンバーは、無料で使えます。</p>
+      <p class="pricing-emphasis" id="price-desc3">オーナーが1人払えば、メンバー全員が言葉の壁を越えられます。</p>
+      <p id="price-desc4">これは、立場の弱い人や、言葉が通じないことで困っている人から、お金を取らないための仕組みです。</p>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- Point System -->
 <div class="section">
   <div class="section-inner">
-    <p class="section-label" id="price-label">料金プラン</p>
-    <h2 class="section-title" id="price-title">シンプルな従量課金制</h2>
-    <p class="section-desc" id="price-desc">チャットルームのオーナーが利用分をまとめて負担。外国人スタッフは無料で利用できます。</p>
-    <div class="pricing">
-      <div class="price-card lg-card-sm">
-        <h3 id="p1-name">月額サブスクリプション</h3>
-        <div class="price-num">¥800<span id="p1-per"> / 月</span></div>
-        <ul class="price-list"><li id="p1-1">基本チャット機能</li><li id="p1-2">初回2,660ポイント付与</li><li id="p1-3">翻訳・送受信</li></ul>
-      </div>
-      <div class="price-card lg-card">
-        <div class="price-badge" id="p2-badge">おすすめ</div>
-        <h3 id="p2-name">ポイント追加購入</h3>
-        <div class="price-num">¥800〜<span id="p2-per"> / 都度</span></div>
-        <ul class="price-list"><li id="p2-1">¥800 → 4,250pt</li><li id="p2-2">¥1,600 → 8,500pt</li><li id="p2-3">¥4,800 → 25,500pt</li><li id="p2-4">¥8,000 → 42,500pt</li></ul>
-      </div>
-      <div class="price-card lg-card-sm">
-        <h3 id="p3-name">ポイント消費の目安</h3>
-        <div class="price-num" style="font-size:18px; margin-top:10px;">機能別</div>
-        <ul class="price-list"><li id="p3-1">AI画像認識：250pt / 回</li><li id="p3-2">OCR翻訳：125pt / 回</li><li id="p3-3">AIチャット：トークン×20</li><li id="p3-4">音声入出力：従量</li></ul>
-      </div>
+    <p class="section-label" id="point-label">ポイントの仕組みについて</p>
+    <h2 class="section-title" id="point-title">為替レートに合わせて、自動調整されます。</h2>
+    <div class="pricing-box lg-card-sm">
+      <p id="point-desc1">TransWorksの各機能は、海外のサービス(Google翻訳、OpenAI、Google Cloudなど)を使っています。これらの料金は、すべて米ドル建てです。</p>
+      <p id="point-desc2">ポイントの消費量は、為替レートに合わせて自動的に調整されます。これにより、為替が動いても、世界中のどの国でも、同じようにサービスを続けられます。</p>
+      <p id="point-desc3">ポイントの残りと使い道は、オーナーの画面でいつでも確認できます。</p>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- Use Cases -->
+<div class="section alt-bg">
+  <div class="section-inner">
+    <p class="section-label" id="use-label">使われ方</p>
+    <h2 class="section-title" id="use-title">仕事の場でも、暮らしの場でも。</h2>
+    <p class="section-desc" id="use-desc">言葉の壁があるすべての場面で、TransWorks は使えます。</p>
+    <div class="use-cases">
+      <div class="use-case lg-card-sm" id="u1">海外のスタッフを雇う会社の、社内のやり取りに</div>
+      <div class="use-case lg-card-sm" id="u2">本社と海外拠点をつなぐ、業務連絡に</div>
+      <div class="use-case lg-card-sm" id="u3">多国籍のメンバーが集まるチームの、共通の場として</div>
+      <div class="use-case lg-card-sm" id="u4">階層のある組織で、ルームをまたいで情報を伝えるために</div>
+      <div class="use-case lg-card-sm" id="u5">海外のパートナーとの、商談や打ち合わせに</div>
+      <div class="use-case lg-card-sm" id="u6">国際的なイベントで、参加者どうしが話すために</div>
+      <div class="use-case lg-card-sm" id="u7">外国籍の友人や隣人と、日常の会話に</div>
+      <div class="use-case lg-card-sm" id="u8">現場で働く人たちの、安全な業務連絡に</div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- Background -->
+<div class="section">
+  <div class="section-inner">
+    <p class="section-label" id="bg-label">このアプリが生まれた背景</p>
+    <h2 class="section-title" id="bg-title">ある現場の光景から。</h2>
+    <div class="story lg-card">
+      <p id="bg-p1">世界中の建設現場、工場、農場、介護施設、飲食店——そこには、危険を知らせる表示があります。「頭上注意」「段差あり」「高電圧 注意」。注意事項の書類があります。安全マニュアルがあります。そのほとんどが、その国の言葉で書かれています。</p>
+      <p id="bg-p2">責任者は、説明します。一生懸命に、身振り手振りを交えて。労働者は、答えます。「はい、はい」と。</p>
+      <p class="story-emphasis" id="bg-p3">誰も、悪いのではありません。ただ、そこに言語の壁があるからです。</p>
+      <p id="bg-p4">しかし、実際には伝わっていないことがあります。些細な行き違いで済むことが、ほとんどです。でも、いつか、そうでない日が来るかもしれません。</p>
+      <p id="bg-p5">これは、世界中で、毎日、起きていることです。</p>
+      <p id="bg-p6">そして、この同じ構造は、現場だけでなく、ホワイトカラーのオフィスにも、業務連絡にも、日常の会話にも、あります。TransWorksは、そのすべての場面で使えるように、作りました。</p>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- Mission -->
+<div class="section alt-bg">
+  <div class="section-inner">
+    <p class="section-label" id="mission-label">このアプリが目指すもの</p>
+    <h2 class="section-title" id="mission-title">ちゃんと出会える場所を。</h2>
+    <div class="story lg-card-sm">
+      <p id="mission-p1">伝えたい人と、聞きたい人が、言葉の壁を越えて、ちゃんと出会える場所をつくること。</p>
+      <p id="mission-p2">「はい、はい」と答えるしかなかった人が、自分の言葉で、わかった、わからない、もう一度、と言える場所をつくること。</p>
+      <p class="story-emphasis" id="mission-p3">それが、TransWorksです。</p>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- Development -->
+<div class="section">
+  <div class="section-inner">
+    <p class="section-label" id="dev-label">開発について</p>
+    <h2 class="section-title" id="dev-title">ひとりの開発者と、AI。</h2>
+    <div class="story lg-card-sm">
+      <p id="dev-p1">TransWorksは、ひとりの開発者が、AIと協業しながら作っています。</p>
+      <p id="dev-p2">最初はChatGPTと相談しながら設計を進め、次にGemini、そして現在はClaudeをパートナーとして、ひとつずつ機能を組み上げてきました。</p>
+      <p id="dev-p3">巨大なテック企業が運営する大規模サービスではありません。ひとりが、AIを話し相手として、対話を重ねながら作ってきたアプリです。</p>
+      <p id="dev-p4">このアプリは、特定の AI に依存していません。v1.1 では、AI 機能に Claude も追加し、ユーザー自身が、用途に応じて AI を選べるようにしていきます。</p>
+      <p id="dev-p5">文字でのやり取りを中心としているため、耳の聞こえない方にも使えます。目の見えない方にも使えるよう、音声で操作できる専用モードを開発中です。</p>
+      <p id="dev-p6">これからも、使ってくださる方の声を聞きながら、ゆっくりと育てていきます。</p>
     </div>
   </div>
 </div>
@@ -327,8 +398,8 @@
 <!-- CTA -->
 <div class="cta-wrap">
   <div class="cta-box lg-card">
-    <h2 id="dl-title">今すぐ始めましょう。</h2>
-    <p id="dl-desc">言語の壁のない職場環境を、TransWorksで実現してください。</p>
+    <h2 id="dl-title">言葉の壁を、超えてみましょう。</h2>
+    <p id="dl-desc">TransWorksは、もうすぐリリースされます。</p>
     <div class="store-btns">
       <button class="btn-lg">
         <svg viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98l-.09.06c-.22.14-2.15 1.26-2.12 3.76.03 2.98 2.61 3.97 2.64 3.98l-.07.34zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
@@ -354,55 +425,130 @@
 
 <script>
 const ja = {
-  badge:'多言語職場コミュニケーション','hero-tagline':'言語の壁を、越えよう。','btn-download':'無料でダウンロード','btn-learn':'詳しく見る',
-  'feat-label':'主な機能','feat-title':'職場に必要な機能が、すべて揃っています。','feat-desc':'翻訳・AI・音声・OCRをひとつのアプリに統合。使った分だけの従量課金で対応します。',
-  'f1-title':'130言語以上のリアルタイム翻訳','f1-desc':'Google翻訳APIを活用。メッセージが自動的に相手の言語に翻訳されて届きます。',
-  'f2-title':'チーム共有型AIアシスタント','f2-desc':'現場の疑問をAIに質問。回答はチームに共有され、熟練者が補足できます。',
-  'f3-title':'音声入出力・会話モード','f3-desc':'話しかけるだけでメッセージ送信。会話モードで同僚との親交を深められます。',
-  'f4-title':'アナウンス機能','f4-desc':'専用アナウンスルームが自動生成。重要な連絡が会話に埋もれません。',
-  'f5-title':'OCRテキスト翻訳','f5-desc':'書類や掲示物を撮影するだけでテキストを認識・翻訳します。',
-  'f6-title':'言語習得サポート','f6-desc':'タップで翻訳後を、ダブルタップで原文を読み上げ。自然に現地語が身につきます。',
-  'stats-label':'数字で見る','stats-title':'TransWorksの実力',
-  's1':'対応言語数','s2':'月額サブスクリプション','s3':'職種カテゴリー','s4':'外国人スタッフの利用料金',
-  'how-label':'使い方','how-title':'3ステップで始められます。',
-  'h1-title':'アプリをダウンロード','h1-desc':'App StoreまたはGoogle Playから無料でダウンロード。外国人スタッフへの費用は一切かかりません。',
-  'h2-title':'チャットルームを作成','h2-desc':'オーナーがチャットルームを作成してメンバーを招待。アナウンスルームが自動生成されます。',
-  'h3-title':'言語の壁なく会話開始','h3-desc':'各メンバーが自分の言語でメッセージを送るだけ。リアルタイムで相手の言語に翻訳されます。',
-  'price-label':'料金プラン','price-title':'シンプルな従量課金制','price-desc':'チャットルームのオーナーが利用分をまとめて負担。外国人スタッフは無料で利用できます。',
-  'p1-name':'月額サブスクリプション','p1-per':' / 月','p1-1':'基本チャット機能','p1-2':'初回2,660ポイント付与','p1-3':'翻訳・送受信',
-  'p2-badge':'おすすめ','p2-name':'ポイント追加購入','p2-per':' / 都度',
-  'p2-1':'¥800 → 4,250pt','p2-2':'¥1,600 → 8,500pt','p2-3':'¥4,800 → 25,500pt','p2-4':'¥8,000 → 42,500pt',
-  'p3-name':'ポイント消費の目安','p3-1':'AI画像認識：250pt / 回','p3-2':'OCR翻訳：125pt / 回','p3-3':'AIチャット：トークン×20','p3-4':'音声入出力：従量',
-  'dl-title':'今すぐ始めましょう。','dl-desc':'言語の壁のない職場環境を、TransWorksで実現してください。',
+  badge:'多言語チャットアプリ',
+  'hero-tagline':'言語の壁を超えて。',
+  'btn-download':'ダウンロード','btn-learn':'詳しく見る',
+  'hero-svg-label':'MULTILINGUAL CHAT APP',
+  'intro-label':'TransWorksとは','intro-title':'言語の壁を超えて、通じ合うために。',
+  'intro-desc':'TransWorksは、多言語チャットアプリです。言語の壁を超えて、コミュニケーションを支援します。自分の母国語で書いた言葉が、相手の母国語で届きます。世界中のどこにいる人とでも、自分の言葉のままで会話できます。',
+  'feat-label':'できること','feat-title':'必要なものが、揃っています。',
+  'f1-title':'チャット','f1-desc':'文字でやり取りします。書いた言葉は、相手の母国語に訳されて届きます。相手の言葉は、自分の母国語で読めます。',
+  'f2-title':'音声','f2-desc':'話した言葉を、その場で訳します。声でやり取りができます。',
+  'f3-title':'写真の翻訳','f3-desc':'契約書、看板、書類、ホワイトボード、メニュー。写真に撮ると、その中の文字を訳します。',
+  'f4-title':'わからないことを訊く','f4-desc':'チームで使うAIに、母国語で訊けます。仕事の専門用語、過去のやり取り、業務の流れを踏まえて答えます。',
+  'f5-title':'大事な連絡を、残す','f5-desc':'大事なメッセージは、アナウンスに投稿できます。投稿された内容は、後から参加した人にも、母国語で表示されます。',
+  'f6-title':'他のルームへ、伝える','f6-desc':'取締役会議のルーム ↔ 部長会議のルーム。組織の階層に沿った情報の流れを作れます。<sup>※1</sup>',
+  'f7-title':'ハラスメントを感じたとき','f7-desc':'画面をダブルタップすると、その画面が記録として、あなたと運営側に保存されます。<sup>※2</sup>',
+  'f8-title':'少しずつ、相手の言葉を覚える','f8-desc':'タップすると訳が、ダブルタップすると元の発音が、聞けます。使っているうちに、相手の言葉が自然に身についていきます。',
+  'f9-title':'読みやすく','f9-desc':'文字の大きさを変えられます。読み上げもできます。',
+  'note1':'※1 取締役会議のルームで話された内容のうち、自分の部署に必要なメッセージを、部長が自分の部署のルームに転送できます。このように、組織の階層をまたいで、情報を流せます。転送するとき、元のメッセージは画像として残り、編集できません。転送先のメンバーには、それぞれの母国語に翻訳された内容も、並んで表示されます。',
+  'note2':'※2 記録には、ルームのID、相手のID、時刻のウォーターマークが刻まれます。',
+  'price-label':'料金について','price-title':'招待されたメンバーは、無料です。',
+  'price-desc1':'チャットルームのオーナーが、料金を支払います。',
+  'price-desc2':'オーナーが月額の利用料金とポイントを購入すると、そのチャットルームのメンバーは、無料で使えます。',
+  'price-desc3':'オーナーが1人払えば、メンバー全員が言葉の壁を越えられます。',
+  'price-desc4':'これは、立場の弱い人や、言葉が通じないことで困っている人から、お金を取らないための仕組みです。',
+  'point-label':'ポイントの仕組みについて','point-title':'為替レートに合わせて、自動調整されます。',
+  'point-desc1':'TransWorksの各機能は、海外のサービス(Google翻訳、OpenAI、Google Cloudなど)を使っています。これらの料金は、すべて米ドル建てです。',
+  'point-desc2':'ポイントの消費量は、為替レートに合わせて自動的に調整されます。これにより、為替が動いても、世界中のどの国でも、同じようにサービスを続けられます。',
+  'point-desc3':'ポイントの残りと使い道は、オーナーの画面でいつでも確認できます。',
+  'use-label':'使われ方','use-title':'仕事の場でも、暮らしの場でも。',
+  'use-desc':'言葉の壁があるすべての場面で、TransWorks は使えます。',
+  'u1':'海外のスタッフを雇う会社の、社内のやり取りに',
+  'u2':'本社と海外拠点をつなぐ、業務連絡に',
+  'u3':'多国籍のメンバーが集まるチームの、共通の場として',
+  'u4':'階層のある組織で、ルームをまたいで情報を伝えるために',
+  'u5':'海外のパートナーとの、商談や打ち合わせに',
+  'u6':'国際的なイベントで、参加者どうしが話すために',
+  'u7':'外国籍の友人や隣人と、日常の会話に',
+  'u8':'現場で働く人たちの、安全な業務連絡に',
+  'bg-label':'このアプリが生まれた背景','bg-title':'ある現場の光景から。',
+  'bg-p1':'世界中の建設現場、工場、農場、介護施設、飲食店——そこには、危険を知らせる表示があります。「頭上注意」「段差あり」「高電圧 注意」。注意事項の書類があります。安全マニュアルがあります。そのほとんどが、その国の言葉で書かれています。',
+  'bg-p2':'責任者は、説明します。一生懸命に、身振り手振りを交えて。労働者は、答えます。「はい、はい」と。',
+  'bg-p3':'誰も、悪いのではありません。ただ、そこに言語の壁があるからです。',
+  'bg-p4':'しかし、実際には伝わっていないことがあります。些細な行き違いで済むことが、ほとんどです。でも、いつか、そうでない日が来るかもしれません。',
+  'bg-p5':'これは、世界中で、毎日、起きていることです。',
+  'bg-p6':'そして、この同じ構造は、現場だけでなく、ホワイトカラーのオフィスにも、業務連絡にも、日常の会話にも、あります。TransWorksは、そのすべての場面で使えるように、作りました。',
+  'mission-label':'このアプリが目指すもの','mission-title':'ちゃんと出会える場所を。',
+  'mission-p1':'伝えたい人と、聞きたい人が、言葉の壁を越えて、ちゃんと出会える場所をつくること。',
+  'mission-p2':'「はい、はい」と答えるしかなかった人が、自分の言葉で、わかった、わからない、もう一度、と言える場所をつくること。',
+  'mission-p3':'それが、TransWorksです。',
+  'dev-label':'開発について','dev-title':'ひとりの開発者と、AI。',
+  'dev-p1':'TransWorksは、ひとりの開発者が、AIと協業しながら作っています。',
+  'dev-p2':'最初はChatGPTと相談しながら設計を進め、次にGemini、そして現在はClaudeをパートナーとして、ひとつずつ機能を組み上げてきました。',
+  'dev-p3':'巨大なテック企業が運営する大規模サービスではありません。ひとりが、AIを話し相手として、対話を重ねながら作ってきたアプリです。',
+  'dev-p4':'このアプリは、特定の AI に依存していません。v1.1 では、AI 機能に Claude も追加し、ユーザー自身が、用途に応じて AI を選べるようにしていきます。',
+  'dev-p5':'文字でのやり取りを中心としているため、耳の聞こえない方にも使えます。目の見えない方にも使えるよう、音声で操作できる専用モードを開発中です。',
+  'dev-p6':'これからも、使ってくださる方の声を聞きながら、ゆっくりと育てていきます。',
+  'dl-title':'言葉の壁を、超えてみましょう。',
+  'dl-desc':'TransWorksは、もうすぐリリースされます。',
   'link-privacy':'プライバシーポリシー','link-terms':'利用規約','link-contact':'お問い合わせ',
   'footer-copy':'© 2026 TransWorks. All rights reserved.',
 };
 const en = {
-  badge:'Multilingual Workplace Communication','hero-tagline':'Break the language barrier. At work.','btn-download':'Download for Free','btn-learn':'Learn More',
-  'feat-label':'Features','feat-title':'Everything your workplace needs.','feat-desc':'Translation, AI, voice, and OCR — all in one app. Pay only for what you use.',
-  'f1-title':'Real-time Translation in 130+ Languages','f1-desc':'Powered by Google Translate API. Messages are automatically translated into each recipient\'s language.',
-  'f2-title':'Team-shared AI Assistant','f2-desc':'Ask AI anything on the job. Responses are shared so experienced staff can add context.',
-  'f3-title':'Voice Input/Output & Conversation Mode','f3-desc':'Just speak to send a message. Switch to conversation mode to connect with colleagues.',
-  'f4-title':'Announcement Feature','f4-desc':'A dedicated announcement room is auto-created. Important messages never get buried.',
-  'f5-title':'OCR Text Translation','f5-desc':'Photograph documents or notices to recognize and translate text instantly.',
-  'f6-title':'Language Learning Support','f6-desc':'Tap to hear the translation, double-tap for the original. Learn naturally through daily use.',
-  'stats-label':'By the numbers','stats-title':'TransWorks at a glance',
-  's1':'Supported languages','s2':'Monthly subscription','s3':'Job categories','s4':'Cost for foreign workers',
-  'how-label':'How it works','how-title':'Get started in 3 steps.',
-  'h1-title':'Download the app','h1-desc':'Free on App Store or Google Play. No cost for foreign workers.',
-  'h2-title':'Create a chat room','h2-desc':'The owner creates a chat room and invites members. An announcement room is created automatically.',
-  'h3-title':'Start communicating','h3-desc':'Each member writes in their own language. Messages are translated in real time.',
-  'price-label':'Pricing','price-title':'Simple pay-as-you-go pricing','price-desc':'The chat room owner covers all costs. Foreign workers use TransWorks for free.',
-  'p1-name':'Monthly Subscription','p1-per':' / month','p1-1':'Core chat features','p1-2':'2,660 points on first month','p1-3':'Translation & messaging',
-  'p2-badge':'Recommended','p2-name':'Point Packs','p2-per':' / purchase',
-  'p2-1':'¥800 → 4,250 pts','p2-2':'¥1,600 → 8,500 pts','p2-3':'¥4,800 → 25,500 pts','p2-4':'¥8,000 → 42,500 pts',
-  'p3-name':'Point Usage Guide','p3-1':'AI Vision: 250 pts / use','p3-2':'OCR Translation: 125 pts / use','p3-3':'AI Chat: tokens × 20','p3-4':'Voice I/O: metered',
-  'dl-title':'Ready to get started?','dl-desc':'Build a workplace without language barriers with TransWorks.',
-  'link-privacy':'Privacy Policy','link-terms':'Terms of Use','link-contact':'Contact Us',
+  badge:'Multilingual Chat App',
+  'hero-tagline':'Beyond the language barrier.',
+  'btn-download':'Download','btn-learn':'Learn More',
+  'hero-svg-label':'MULTILINGUAL CHAT APP',
+  'intro-label':'About TransWorks','intro-title':'For those who want to understand each other.',
+  'intro-desc':'TransWorks is a multilingual chat app. It helps you communicate across the language barrier. What you write in your own language reaches the other person in theirs. You can talk with anyone, anywhere in the world, each in their own language.',
+  'feat-label':'What you can do','feat-title':'Everything you need is here.',
+  'f1-title':'Chat','f1-desc':'Exchange messages by text. What you write is translated into the other person\'s language. What they write, you read in your own language.',
+  'f2-title':'Voice','f2-desc':'What you say is translated on the spot. You can have voice conversations.',
+  'f3-title':'Translate photos','f3-desc':'Contracts, signs, documents, whiteboards, menus. Take a photo, and the text inside is translated.',
+  'f4-title':'Ask when you don\'t understand','f4-desc':'Ask the team\'s AI assistant in your own language. It answers based on your work-specific terminology, past conversations, and workflow.',
+  'f5-title':'Keep important messages','f5-desc':'Important messages can be posted to the announcement room. Anyone who joins later will see them in their own language.',
+  'f6-title':'Pass to other rooms','f6-desc':'Board meeting room ↔ department head meeting room. You can shape the flow of information along the layers of your organization.<sup>※1</sup>',
+  'f7-title':'When you feel harassment','f7-desc':'Double-tap the screen, and that screen is saved as a record, both to you and to the operator.<sup>※2</sup>',
+  'f8-title':'Pick up the other person\'s language','f8-desc':'Tap to see the translation, double-tap to hear the original pronunciation. As you use it, you naturally learn the other person\'s language.',
+  'f9-title':'Easier to read','f9-desc':'You can adjust the text size. You can also have messages read aloud.',
+  'note1':'※1 From what was discussed in the board meeting room, the department head can forward messages relevant to their department to their own room. In this way, information can flow across the layers of an organization. When forwarded, the original message remains as an image and cannot be edited. The forwarded content is also shown in each member\'s own language, side by side.',
+  'note2':'※2 The record includes a watermark with the room ID, the other person\'s ID, and the timestamp.',
+  'price-label':'About pricing','price-title':'Invited members use it for free.',
+  'price-desc1':'The owner of the chat room pays for the service.',
+  'price-desc2':'Once the owner subscribes monthly and purchases points, all members of that chat room can use it for free.',
+  'price-desc3':'If one owner pays, every member can cross the language barrier.',
+  'price-desc4':'This is designed so that people in vulnerable positions, or people struggling because of language barriers, are not asked to pay.',
+  'point-label':'About points','point-title':'Adjusted automatically to exchange rates.',
+  'point-desc1':'The features of TransWorks use overseas services (Google Translate, OpenAI, Google Cloud, and others). All of these are priced in U.S. dollars.',
+  'point-desc2':'Point consumption is adjusted automatically according to exchange rates. This way, no matter how currencies move, the service can be provided consistently in any country in the world.',
+  'point-desc3':'The remaining points and how they have been used are always visible on the owner\'s screen.',
+  'use-label':'How it is used','use-title':'At work, and in everyday life.',
+  'use-desc':'Wherever there is a language barrier, TransWorks can be used.',
+  'u1':'For internal communication in companies hiring overseas staff',
+  'u2':'For business communication between headquarters and overseas offices',
+  'u3':'As a shared space for multinational teams',
+  'u4':'For passing information across rooms in layered organizations',
+  'u5':'For business meetings and discussions with overseas partners',
+  'u6':'For participants to talk to each other at international events',
+  'u7':'For everyday conversation with foreign friends or neighbors',
+  'u8':'For safe and clear communication on worksites',
+  'bg-label':'How this app came to be','bg-title':'From a scene at a worksite.',
+  'bg-p1':'Around the world, on construction sites, in factories, on farms, in care facilities, in restaurants — there are signs warning of danger. "Watch your head." "Mind the step." "High voltage." There are documents with safety instructions. There are safety manuals. Most of them are written in the language of the country.',
+  'bg-p2':'The supervisor explains. With all their effort, with gestures. The worker answers, "Yes, yes."',
+  'bg-p3':'No one is at fault. There is simply a language barrier between them.',
+  'bg-p4':'But what was said often does not actually reach the other side. Most of the time, this leads to small misunderstandings. But one day, it may lead to something that is not small.',
+  'bg-p5':'This is happening every day, in every part of the world.',
+  'bg-p6':'And this same pattern is not only on worksites. It exists in offices, in business communication, in everyday conversation, everywhere. TransWorks is designed to be used in all of these situations.',
+  'mission-label':'What this app hopes for','mission-title':'A place where they can truly meet.',
+  'mission-p1':'To create a place where the person who wants to say something and the person who wants to listen can finally meet, across the language barrier.',
+  'mission-p2':'To create a place where someone who could only answer "yes, yes" can now say, in their own language: "I understand," "I don\'t understand," "Please tell me again."',
+  'mission-p3':'That is TransWorks.',
+  'dev-label':'About the development','dev-title':'One developer, and AI.',
+  'dev-p1':'TransWorks is being developed by one independent developer, in collaboration with AI.',
+  'dev-p2':'It started with conversations with ChatGPT. Then with Gemini. And now, the development partner is Claude. Feature by feature, the app has been built through these dialogues.',
+  'dev-p3':'It is not a large-scale service run by a major tech company. It is an app built by one person, with AI as a conversation partner, through many rounds of dialogue.',
+  'dev-p4':'This app does not depend on any single AI. In version 1.1, Claude will also be added as one of the AI options, so that users can choose the AI that fits their purpose.',
+  'dev-p5':'Because the app is centered on text-based communication, it can already be used by people who are hard of hearing. A dedicated mode that can be operated by voice is being developed, so that people who are blind can also use the app.',
+  'dev-p6':'We will continue to listen to the voices of those who use TransWorks, and grow the app slowly, with care.',
+  'dl-title':'Step beyond the language barrier.',
+  'dl-desc':'TransWorks will be released soon.',
+  'link-privacy':'Privacy Policy','link-terms':'Terms of Use','link-contact':'Contact',
   'footer-copy':'© 2026 TransWorks. All rights reserved.',
 };
 function setLang(l) {
   const d = l==='ja' ? ja : en;
+  document.documentElement.lang = l;
   document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
   document.querySelector(`.lang-btn[onclick="setLang('${l}')"]`).classList.add('active');
   Object.entries(d).forEach(([id,val])=>{const el=document.getElementById(id);if(el)el.innerHTML=val;});
