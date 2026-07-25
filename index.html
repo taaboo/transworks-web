@@ -8,33 +8,26 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, 'SF Pro Display', 'Helvetica Neue', sans-serif; background: #f8fafc; color: #1d1d1f; }
-
     /* Lang Toggle */
     .lang-toggle { display: flex; gap: 8px; justify-content: center; padding: 20px; position: relative; z-index: 10; }
     .lang-btn { background: rgba(255,255,255,0.45); border-top: 1px solid rgba(255,255,255,0.95); border-left: 1px solid rgba(255,255,255,0.8); border-right: 1px solid rgba(255,255,255,0.2); border-bottom: 1px solid rgba(255,255,255,0.35); color: rgba(0,0,0,0.6); padding: 5px 14px; border-radius: 20px; font-size: 12px; cursor: pointer; backdrop-filter: blur(12px); }
     .lang-btn.active { background: rgba(255,255,255,0.7); color: rgba(0,0,0,0.8); }
-
     /* Hero */
     .hero-wrap { position: relative; min-height: 580px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 40px 24px 60px; }
     .bg-art { position: absolute; inset: 0; z-index: 0; }
     .bg-art svg { width: 100%; height: 100%; object-fit: cover; }
     .fg { position: relative; z-index: 2; text-align: center; width: 100%; }
-
     .badge { display: inline-block; padding: 6px 18px; border-radius: 30px; font-size: 11px; letter-spacing: 2px; color: rgba(0,0,0,0.62); background: rgba(255,255,255,0.5); border-top: 1px solid rgba(255,255,255,0.95); border-left: 1px solid rgba(255,255,255,0.8); border-right: 1px solid rgba(255,255,255,0.25); border-bottom: 1px solid rgba(255,255,255,0.4); backdrop-filter: blur(16px); box-shadow: 0 2px 8px rgba(0,0,0,0.05), inset 0 1px 0 rgba(255,255,255,0.9); margin-bottom: 28px; }
-
     .hero-svg { max-width: 620px; display: block; margin: 0 auto 24px; width: 100%; }
     .hero-tagline { font-size: 18px; font-weight: 400; color: rgba(0,0,0,0.62); letter-spacing: 3px; margin-bottom: 8px; }
     .hero-sub-tagline { font-size: 14px; font-weight: 300; color: rgba(0,0,0,0.5); letter-spacing: 1px; margin-bottom: 32px; font-style: italic; }
     .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-
     .btn-dark { background: rgba(0,0,0,0.82); color: #fff; padding: 14px 32px; border-radius: 50px; font-size: 15px; font-weight: 500; border: none; cursor: pointer; letter-spacing: 0.3px; }
-    .btn-lg { display: inline-flex; align-items: center; gap: 9px; padding: 14px 28px; border-radius: 50px; font-size: 15px; font-weight: 500; cursor: pointer; background: rgba(255,255,255,0.45); color: rgba(0,0,0,0.6); border-top: 1px solid rgba(255,255,255,0.95); border-left: 1px solid rgba(255,255,255,0.75); border-right: 1px solid rgba(255,255,255,0.2); border-bottom: 1px solid rgba(255,255,255,0.35); backdrop-filter: blur(16px); box-shadow: 0 2px 8px rgba(0,0,0,0.05), inset 0 1px 0 rgba(255,255,255,0.85); }
+    .btn-lg { display: inline-flex; align-items: center; gap: 9px; padding: 14px 28px; border-radius: 50px; font-size: 15px; font-weight: 500; cursor: pointer; background: rgba(255,255,255,0.45); color: rgba(0,0,0,0.6); border-top: 1px solid rgba(255,255,255,0.95); border-left: 1px solid rgba(255,255,255,0.75); border-right: 1px solid rgba(255,255,255,0.2); border-bottom: 1px solid rgba(255,255,255,0.35); backdrop-filter: blur(16px); box-shadow: 0 2px 8px rgba(0,0,0,0.05), inset 0 1px 0 rgba(255,255,255,0.85); text-decoration: none; }
     .btn-lg svg { width: 16px; height: 16px; fill: currentColor; }
-
     /* Glass Cards */
     .lg-card { background: rgba(255,255,255,0.42); backdrop-filter: blur(28px) saturate(180%); -webkit-backdrop-filter: blur(28px) saturate(180%); border-radius: 22px; border-top: 1px solid rgba(255,255,255,0.98); border-left: 1px solid rgba(255,255,255,0.8); border-right: 1px solid rgba(255,255,255,0.3); border-bottom: 1px solid rgba(255,255,255,0.5); box-shadow: 0 8px 32px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04), inset 0 1px 0 rgba(255,255,255,0.9); }
     .lg-card-sm { background: rgba(255,255,255,0.35); backdrop-filter: blur(20px) saturate(160%); -webkit-backdrop-filter: blur(20px) saturate(160%); border-radius: 18px; border-top: 1px solid rgba(255,255,255,0.92); border-left: 1px solid rgba(255,255,255,0.72); border-right: 1px solid rgba(255,255,255,0.25); border-bottom: 1px solid rgba(255,255,255,0.4); box-shadow: 0 4px 20px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.85); }
-
     /* Sections */
     .section { padding: 64px 24px; }
     .section-inner { max-width: 880px; margin: 0 auto; }
@@ -43,7 +36,6 @@
     .section-title { font-size: 30px; font-weight: 500; color: #1d1d1f; margin-bottom: 12px; letter-spacing: -0.5px; }
     .section-desc { font-size: 15px; color: rgba(0,0,0,0.65); line-height: 1.8; max-width: 620px; }
     .divider { border: none; border-top: 0.5px solid rgba(0,0,0,0.05); }
-
     /* Features */
     .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 36px; }
     .feat { padding: 22px; }
@@ -51,42 +43,37 @@
     .feat-icon svg { width: 18px; height: 18px; fill: rgba(0,0,0,0.55); }
     .feat h3 { font-size: 14px; font-weight: 500; color: #1d1d1f; margin-bottom: 5px; }
     .feat p { font-size: 13px; color: rgba(0,0,0,0.62); line-height: 1.6; }
-
     /* Use Cases */
     .use-cases { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin-top: 36px; }
     .use-case { padding: 18px 22px; font-size: 13.5px; color: rgba(0,0,0,0.68); line-height: 1.65; }
-
     /* Pricing */
     .pricing-box { padding: 36px 32px; margin-top: 36px; }
     .pricing-box p { font-size: 14.5px; color: rgba(0,0,0,0.68); line-height: 1.8; margin-bottom: 14px; }
     .pricing-box p:last-child { margin-bottom: 0; }
     .pricing-emphasis { font-size: 16px; color: #1d1d1f; font-weight: 500; }
-
     /* Story (Background) */
     .story { padding: 40px 32px; margin-top: 36px; }
     .story p { font-size: 14.5px; color: rgba(0,0,0,0.7); line-height: 1.9; margin-bottom: 16px; }
     .story p:last-child { margin-bottom: 0; }
     .story-emphasis { font-weight: 500; color: #1d1d1f; font-size: 15.5px; }
-
     /* Notes */
     .notes { margin-top: 24px; padding: 20px 24px; background: rgba(0,0,0,0.02); border-radius: 12px; border: 0.5px solid rgba(0,0,0,0.05); }
     .notes p { font-size: 12px; color: rgba(0,0,0,0.55); line-height: 1.7; margin-bottom: 10px; }
     .notes p:last-child { margin-bottom: 0; }
-
+    /* How-to link row */
+    .howto-row { margin-top: 28px; display: flex; justify-content: center; }
     /* CTA */
     .cta-wrap { padding: 60px 24px; text-align: center; }
     .cta-box { max-width: 520px; margin: 0 auto; padding: 48px 40px; }
     .cta-box h2 { font-size: 26px; font-weight: 500; color: #1d1d1f; margin-bottom: 10px; letter-spacing: -0.5px; }
     .cta-box p { font-size: 15px; color: rgba(0,0,0,0.62); margin-bottom: 28px; line-height: 1.7; }
     .store-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-
     /* Footer */
     .footer { padding: 28px 24px; text-align: center; background: rgba(255,255,255,0.3); backdrop-filter: blur(10px); border-top: 0.5px solid rgba(255,255,255,0.6); }
     .footer-links { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-bottom: 10px; }
     .footer-links a { font-size: 13px; color: rgba(0,0,0,0.55); text-decoration: none; }
     .footer-links a:hover { color: rgba(0,0,0,0.8); }
     .footer-copy { font-size: 12px; color: rgba(0,0,0,0.45); }
-
     @media (max-width: 600px) {
       .hero-tagline { font-size: 14px; letter-spacing: 2px; }
       .section-title { font-size: 24px; }
@@ -95,7 +82,6 @@
   </style>
 </head>
 <body>
-
 <svg width="0" height="0" style="position:absolute;">
   <defs>
     <filter id="distort-bg" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB">
@@ -161,12 +147,10 @@
     </clipPath>
   </defs>
 </svg>
-
 <div class="lang-toggle">
   <button class="lang-btn active" onclick="setLang('ja')">日本語</button>
   <button class="lang-btn" onclick="setLang('en')">English</button>
 </div>
-
 <!-- Hero -->
 <div class="hero-wrap">
   <div class="bg-art">
@@ -174,25 +158,22 @@
       <rect width="800" height="580" fill="#f8fafc"/>
     </svg>
   </div>
-
   <div class="fg">
     <div class="badge" id="badge">多言語チャットアプリ</div>
-
     <svg class="hero-svg" viewBox="0 0 620 340" xmlns="http://www.w3.org/2000/svg">
       <text x="310" y="60" text-anchor="middle" font-size="11" font-weight="500" font-family="-apple-system,sans-serif" letter-spacing="3.5" fill="rgba(0,0,0,0.52)" id="hero-svg-label">MULTILINGUAL CHAT APP</text>
       <text x="310" y="178" text-anchor="middle" font-size="130" font-weight="900" font-family="-apple-system,sans-serif" letter-spacing="-6" fill="#1d1d1f">Trans</text>
       <text x="310" y="308" text-anchor="middle" font-size="130" font-weight="900" font-family="-apple-system,sans-serif" letter-spacing="-6" fill="#1d1d1f">Works</text>
     </svg>
-
     <p class="hero-tagline" id="hero-tagline">言語の壁を超えて。</p>
     <p class="hero-sub-tagline" id="hero-sub-tagline">Imagine everyone, chatting in their own words.</p>
     <div class="hero-btns">
       <button class="btn-dark" id="btn-download">ダウンロード</button>
+      <a class="btn-lg" href="howto.html" id="btn-howto">使い方</a>
       <button class="btn-lg" id="btn-learn">詳しく見る</button>
     </div>
   </div>
 </div>
-
 <!-- Intro -->
 <div class="section alt-bg">
   <div class="section-inner">
@@ -201,9 +182,7 @@
     <p class="section-desc" id="intro-desc">TransWorksは、多言語チャットアプリです。言語の壁を超えて、コミュニケーションを支援します。自分の母国語で書いた言葉が、相手の母国語で届きます。世界中のどこにいる人とでも、自分の言葉のままで会話できます。</p>
   </div>
 </div>
-
 <hr class="divider">
-
 <!-- Features -->
 <div class="section">
   <div class="section-inner">
@@ -256,16 +235,19 @@
         <p id="f9-desc">文字の大きさを変えられます。読み上げもできます。</p>
       </div>
     </div>
-
     <div class="notes">
       <p id="note1">※1 取締役会議のルームで話された内容のうち、自分の部署に必要なメッセージを、部長が自分の部署のルームに転送できます。このように、組織の階層をまたいで、情報を流せます。転送するとき、元のメッセージは画像として残り、編集できません。転送先のメンバーには、それぞれの母国語に翻訳された内容も、並んで表示されます。</p>
       <p id="note2">※2 記録には、ルームのID、相手のID、時刻のウォーターマークが刻まれます。</p>
     </div>
+    <div class="howto-row">
+      <a class="btn-lg" href="howto.html" id="btn-howto-feat">
+        <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM13 17h-2v-2h2v2zm2.07-7.75l-.9.92c-.5.51-.86.97-1.04 1.69-.8.32-.13.68-.13 1.14h-2v-.5c0-.46.08-.9.22-1.31.2-.58.53-1.1.95-1.52l1.24-1.26c.46-.44.68-1.1.55-1.8-.13-.72-.69-1.33-1.39-1.53-1.11-.31-2.14.32-2.47 1.27-.12.37-.43.65-.82.65h-.3C8.4 8 8 7.44 8.16 6.88c.43-1.47 1.68-2.59 3.23-2.83 1.52-.24 2.97.55 3.87 1.8 1.18 1.63.83 3.38-.19 4.4z"/></svg>
+        使い方を見る
+      </a>
+    </div>
   </div>
 </div>
-
 <hr class="divider">
-
 <!-- Pricing -->
 <div class="section alt-bg">
   <div class="section-inner">
@@ -279,9 +261,7 @@
     </div>
   </div>
 </div>
-
 <hr class="divider">
-
 <!-- Point System -->
 <div class="section">
   <div class="section-inner">
@@ -294,9 +274,7 @@
     </div>
   </div>
 </div>
-
 <hr class="divider">
-
   <!-- Video -->
 <div class="section">
   <div class="section-inner">
@@ -311,9 +289,14 @@
     <div class="notes">
       <p id="video-note">※ 字幕は、YouTube の設定(⚙)→「字幕」→「自動翻訳」から、お使いの言語に翻訳してご覧いただけます。</p>
     </div>
+    <div class="howto-row">
+      <a class="btn-lg" href="howto.html" id="btn-howto-video">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+        文章で使い方を見る
+      </a>
+    </div>
   </div>
 </div>
-
 <hr class="divider">
 <!-- Use Cases -->
 <div class="section alt-bg">
@@ -333,9 +316,7 @@
     </div>
   </div>
 </div>
-
 <hr class="divider">
-
 <!-- Background -->
 <div class="section">
   <div class="section-inner">
@@ -351,9 +332,7 @@
     </div>
   </div>
 </div>
-
 <hr class="divider">
-
 <!-- Mission -->
 <div class="section alt-bg">
   <div class="section-inner">
@@ -366,9 +345,7 @@
     </div>
   </div>
 </div>
-
 <hr class="divider">
-
 <!-- Development -->
 <div class="section">
   <div class="section-inner">
@@ -384,7 +361,6 @@
     </div>
   </div>
 </div>
-
 <!-- CTA -->
 <div class="cta-wrap">
   <div class="cta-box lg-card">
@@ -402,23 +378,22 @@
     </div>
   </div>
 </div>
-
 <!-- Footer -->
 <div class="footer">
   <div class="footer-links">
+    <a href="howto.html" id="link-howto">使い方</a>
     <a href="privacy.html" id="link-privacy">プライバシーポリシー</a>
-    <a href="https://transworks.net/terms.html">利用規約</a>
+    <a href="https://transworks.net/terms.html" id="link-terms">利用規約</a>
     <a href="mailto:info@transworks.net" id="link-contact">お問い合わせ</a>
   </div>
   <p class="footer-copy" id="footer-copy">© 2026 TransWorks. All rights reserved.</p>
 </div>
-
 <script>
 const ja = {
   badge:'多言語チャットアプリ',
   'hero-tagline':'言語の壁を超えて。',
   'hero-sub-tagline':'Imagine everyone, chatting in their own words.',
-  'btn-download':'ダウンロード','btn-learn':'詳しく見る',
+  'btn-download':'ダウンロード','btn-learn':'詳しく見る','btn-howto':'使い方',
   'hero-svg-label':'MULTILINGUAL CHAT APP',
   'intro-label':'TransWorksとは','intro-title':'言語の壁を超えて、通じ合うために。',
   'intro-desc':'TransWorksは、多言語チャットアプリです。言語の壁を超えて、コミュニケーションを支援します。自分の母国語で書いた言葉が、相手の母国語で届きます。世界中のどこにいる人とでも、自分の言葉のままで会話できます。',
@@ -434,6 +409,7 @@ const ja = {
   'f9-title':'読みやすく','f9-desc':'文字の大きさを変えられます。読み上げもできます。',
   'note1':'※1 取締役会議のルームで話された内容のうち、自分の部署に必要なメッセージを、部長が自分の部署のルームに転送できます。このように、組織の階層をまたいで、情報を流せます。転送するとき、元のメッセージは画像として残り、編集できません。転送先のメンバーには、それぞれの母国語に翻訳された内容も、並んで表示されます。',
   'note2':'※2 記録には、ルームのID、相手のID、時刻のウォーターマークが刻まれます。',
+  'btn-howto-feat':'使い方を見る',
   'price-label':'料金について','price-title':'招待されたメンバーは、無料です。',
   'price-desc1':'チャットルームのオーナーが、料金を支払います。',
   'price-desc2':'オーナーが月額の利用料金とポイントを購入すると、そのチャットルームのメンバーは、無料で使えます。',
@@ -446,6 +422,7 @@ const ja = {
   'video-label':'動画で見る','video-title':'実際の動きを、ご覧ください。',
   'video-desc':'アプリの動作イメージです。詳しい使い方の動画は、順次追加していきます。',
   'video-note':'※ 字幕は、YouTube の設定(⚙)→「字幕」→「自動翻訳」から、お使いの言語に翻訳してご覧いただけます。',
+  'btn-howto-video':'文章で使い方を見る',
   'use-label':'使われ方','use-title':'仕事の場でも、暮らしの場でも。',
   'use-desc':'言葉の壁があるすべての場面で、TransWorks は使えます。',
   'u1':'海外のスタッフを雇う会社の、社内のやり取りに',
@@ -476,14 +453,14 @@ const ja = {
   'dev-p6':'これからも、使ってくださる方の声を聞きながら、ゆっくりと育てていきます。',
   'dl-title':'言葉の壁を、超えてみましょう。',
   'dl-desc':'TransWorksは、もうすぐリリースされます。',
-  'link-privacy':'プライバシーポリシー','link-terms':'利用規約','link-contact':'お問い合わせ',
+  'link-howto':'使い方','link-privacy':'プライバシーポリシー','link-terms':'利用規約','link-contact':'お問い合わせ',
   'footer-copy':'© 2026 TransWorks. All rights reserved.',
 };
 const en = {
   badge:'Multilingual Chat App',
   'hero-tagline':'Beyond the language barrier.',
   'hero-sub-tagline':'Imagine everyone, chatting in their own words.',
-  'btn-download':'Download','btn-learn':'Learn More',
+  'btn-download':'Download','btn-learn':'Learn More','btn-howto':'How to Use',
   'hero-svg-label':'MULTILINGUAL CHAT APP',
   'intro-label':'About TransWorks','intro-title':'For those who want to understand each other.',
   'intro-desc':'TransWorks is a multilingual chat app. It helps you communicate across the language barrier. What you write in your own language reaches the other person in theirs. You can talk with anyone, anywhere in the world, each in their own language.',
@@ -499,6 +476,7 @@ const en = {
   'f9-title':'Easier to read','f9-desc':'You can adjust the text size. You can also have messages read aloud.',
   'note1':'※1 From what was discussed in the board meeting room, the department head can forward messages relevant to their department to their own room. In this way, information can flow across the layers of an organization. When forwarded, the original message remains as an image and cannot be edited. The forwarded content is also shown in each member\'s own language, side by side.',
   'note2':'※2 The record includes a watermark with the room ID, the other person\'s ID, and the timestamp.',
+  'btn-howto-feat':'See how to use it',
   'price-label':'About pricing','price-title':'Invited members use it for free.',
   'price-desc1':'The owner of the chat room pays for the service.',
   'price-desc2':'Once the owner subscribes monthly and purchases points, all members of that chat room can use it for free.',
@@ -512,6 +490,7 @@ const en = {
   'video-label':'See It in Action','video-title':'Watch TransWorks at work.',
   'video-desc':'This video shows the app in action. Detailed how-to videos are coming soon.',
   'video-note':'※ Subtitles can be translated into your language: YouTube settings (⚙) → Subtitles → Auto-translate.',
+  'btn-howto-video':'Read the text guide',
   'use-desc':'Wherever there is a language barrier, TransWorks can be used.',
   'u1':'For internal communication in companies hiring overseas staff',
   'u2':'For business communication between headquarters and overseas offices',
@@ -541,7 +520,7 @@ const en = {
   'dev-p6':'We will continue to listen to the voices of those who use TransWorks, and grow the app slowly, with care.',
   'dl-title':'Step beyond the language barrier.',
   'dl-desc':'TransWorks will be released soon.',
-  'link-privacy':'Privacy Policy','link-terms':'Terms of Use','link-contact':'Contact',
+  'link-howto':'How to Use','link-privacy':'Privacy Policy','link-terms':'Terms of Use','link-contact':'Contact',
   'footer-copy':'© 2026 TransWorks. All rights reserved.',
 };
 function setLang(l) {
@@ -550,6 +529,10 @@ function setLang(l) {
   document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
   document.querySelector(`.lang-btn[onclick="setLang('${l}')"]`).classList.add('active');
   Object.entries(d).forEach(([id,val])=>{const el=document.getElementById(id);if(el)el.innerHTML=val;});
+  const hf = document.getElementById('btn-howto-feat');
+  if (hf) hf.innerHTML = '<svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM13 17h-2v-2h2v2zm2.07-7.75l-.9.92c-.5.51-.86.97-1.04 1.69-.8.32-.13.68-.13 1.14h-2v-.5c0-.46.08-.9.22-1.31.2-.58.53-1.1.95-1.52l1.24-1.26c.46-.44.68-1.1.55-1.8-.13-.72-.69-1.33-1.39-1.53-1.11-.31-2.14.32-2.47 1.27-.12.37-.43.65-.82.65h-.3C8.4 8 8 7.44 8.16 6.88c.43-1.47 1.68-2.59 3.23-2.83 1.52-.24 2.97.55 3.87 1.8 1.18 1.63.83 3.38-.19 4.4z"/></svg>' + d['btn-howto-feat'];
+  const hv = document.getElementById('btn-howto-video');
+  if (hv) hv.innerHTML = '<svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>' + d['btn-howto-video'];
 }
 </script>
 </body>
