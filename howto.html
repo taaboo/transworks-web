@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>使い方 / How to Use — TransWorks</title>
+<style>
+  :root{
+    --bg:#f8fafc; --card:#ffffff; --ink:#0f172a; --sub:#475569;
+    --line:#e2e8f0; --accent:#2563eb; --accent-soft:#dbeafe;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif;
+    line-height:1.7; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:720px; margin:0 auto; padding:32px 20px 80px;}
+  header.page{text-align:center; padding:24px 0 8px;}
+  header.page h1{font-size:2rem; margin:0 0 6px;}
+  header.page p{color:var(--sub); margin:0;}
+  .toggle{display:flex; justify-content:center; gap:8px; margin:20px 0 32px;}
+  .toggle button{
+    border:1px solid var(--line); background:var(--card); color:var(--sub);
+    padding:8px 20px; border-radius:999px; font-size:.95rem; cursor:pointer;
+    font-weight:600; transition:.15s;
+  }
+  .toggle button.active{background:var(--accent); color:#fff; border-color:var(--accent);}
+  .step{
+    background:var(--card); border:1px solid var(--line); border-radius:16px;
+    padding:22px 24px; margin:0 0 18px;
+  }
+  .step h2{
+    font-size:1.15rem; margin:0 0 12px; display:flex; align-items:center; gap:12px;
+  }
+  .num{
+    flex:0 0 auto; width:34px; height:34px; border-radius:10px;
+    background:var(--accent-soft); color:var(--accent); font-size:1rem;
+    display:flex; align-items:center; justify-content:center; font-weight:700;
+  }
+  .step ul{margin:0; padding:0; list-style:none;}
+  .step li{
+    position:relative; padding:6px 0 6px 22px; color:var(--ink);
+  }
+  .step li::before{
+    content:""; position:absolute; left:2px; top:15px;
+    width:7px; height:7px; border-radius:50%; background:var(--accent);
+  }
+  .en{display:none;}
+  html[data-lang="en"] .ja{display:none;}
+  html[data-lang="en"] .en{display:block;}
+  .figs{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:18px 0 4px;
+  }
+  .figs figure{margin:0;}
+  .figs img{
+    width:100%; height:auto; display:block;
+    border:1px solid var(--line); border-radius:12px; background:var(--card);
+    cursor:zoom-in;
+  }
+  .figs figcaption{
+    text-align:center; font-size:.8rem; color:var(--sub); margin-top:6px;
+  }
+  @media (max-width:560px){
+    .figs{grid-template-columns:1fr; gap:16px;}
+  }
+  .lightbox{
+    position:fixed; inset:0; background:rgba(15,23,42,.88);
+    display:none; align-items:center; justify-content:center; padding:20px; z-index:50;
+    cursor:zoom-out;
+  }
+  .lightbox.open{display:flex;}
+  .lightbox img{max-width:100%; max-height:100%; border-radius:12px;}
+  footer.note{text-align:center; color:var(--sub); font-size:.9rem; margin-top:32px;}
+  .soon{
+    display:inline-block; background:var(--accent-soft); color:var(--accent);
+    font-size:.8rem; padding:3px 10px; border-radius:999px; margin-left:8px; vertical-align:middle;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="page">
+    <h1><span class="ja">使い方</span><span class="en">How to Use</span></h1>
+    <p><span class="ja">TransWorks の基本的な使い方をご案内します。</span><span class="en">A quick guide to using TransWorks.</span></p>
+  </header>
+
+  <div class="toggle">
+    <button id="btn-ja" class="active" onclick="setLang('ja')">日本語</button>
+    <button id="btn-en" onclick="setLang('en')">English</button>
+  </div>
+
+  <!-- 1 About -->
+  <section class="step">
+    <h2><span class="num">1</span><span class="ja">アプリ紹介</span><span class="en">About TransWorks</span></h2>
+    <ul>
+      <li><span class="ja">TransWorks は、言葉の壁を越える多言語チャットアプリです。</span><span class="en">TransWorks is a multilingual chat app that breaks language barriers.</span></li>
+      <li><span class="ja">メッセージは、相手の母国語に自動で翻訳されて届きます。</span><span class="en">Messages are automatically translated into each recipient's language.</span></li>
+      <li><span class="ja">料金はルームのオーナーが払い、メンバーは無料です。</span><span class="en">The room owner pays; members use it for free.</span></li>
+    </ul>
+  </section>
+
+  <!-- 2 Getting started -->
+  <section class="step">
+    <h2><span class="num">2</span><span class="ja">初期設定</span><span class="en">Getting Started</span></h2>
+    <ul>
+      <li><span class="ja">アカウントを登録してログインします。</span><span class="en">Register an account and log in.</span></li>
+      <li><span class="ja">チャットルームを作成します。</span><span class="en">Create a chat room.</span></li>
+      <li><span class="ja">QR コードを表示して、メンバーに読み取ってもらえば招待完了です。</span><span class="en">Show the QR code and have members scan it to join.</span></li>
+    </ul>
+  </section>
+
+  <!-- 3 Basic messaging -->
+  <section class="step">
+    <h2><span class="num">3</span><span class="ja">基本のやり取り</span><span class="en">Basic Messaging</span></h2>
+    <ul>
+      <li><span class="ja">母国語のまま入力して送信します。相手には相手の母国語で届きます。</span><span class="en">Type in your own language and send. It arrives in the recipient's language.</span></li>
+      <li><span class="ja">メッセージをタップすると、翻訳して話します。</span><span class="en">Tap a message to hear the translation.</span></li>
+      <li><span class="ja">ダブルタップすると、原文を読み上げます。</span><span class="en">Double-tap to hear the original.</span></li>
+      <li><span class="ja">マイクで音声入力もできます。</span><span class="en">You can also use voice input with the mic.</span></li>
+      <li><span class="ja">+ボタンから写真を添付すると、写真の中の文字も翻訳されます。</span><span class="en">Attach a photo with the + button, and the text in it gets translated.</span></li>
+      <li><span class="ja">OCR テキストをタップすると、全文を表示できます。</span><span class="en">Tap the OCR text to see the full content.</span></li>
+    </ul>
+  </section>
+
+  <!-- 4 Hierarchical -->
+  <section class="step">
+    <h2><span class="num">4</span><span class="ja">階層組織での伝達</span><span class="en">Hierarchical Communication</span></h2>
+    <ul>
+      <li><span class="ja">階層のある組織でも使えます。</span><span class="en">TransWorks works for hierarchical organizations too.</span></li>
+      <li><span class="ja">責任者は、経営ルームと自部署ルームの両方に参加します。</span><span class="en">Managers belong to both the management room and their own room.</span></li>
+      <li><span class="ja">自分の部署に必要なメッセージだけを選んで転送できます。</span><span class="en">They forward only the messages their department needs.</span></li>
+      <li><span class="ja">メッセージを長押しして「マイルームに共有」を選びます。</span><span class="en">Long-press a message and choose "Share to My Room."</span></li>
+      <li><span class="ja">元のメッセージは画像として残り、編集できません。翻訳も並んで表示されます。</span><span class="en">The original is kept as an image and cannot be edited. Translations appear alongside.</span></li>
+    </ul>
+    <div class="figs">
+      <figure>
+        <img src="howto_org_p1.png" alt="階層組織 / Hierarchical Organization">
+        <figcaption><span class="ja">① 階層組織</span><span class="en">1. Hierarchy</span></figcaption>
+      </figure>
+      <figure>
+        <img src="howto_org_p2.png" alt="チャットルームの構成 / Chat Room Structure">
+        <figcaption><span class="ja">② ルームの構成</span><span class="en">2. Room structure</span></figcaption>
+      </figure>
+      <figure>
+        <img src="howto_org_p3.png" alt="必要なメッセージを選んで転送 / Select and Forward">
+        <figcaption><span class="ja">③ 選んで転送</span><span class="en">3. Select &amp; forward</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 5 Announcements -->
+  <section class="step">
+    <h2><span class="num">5</span><span class="ja">お知らせ</span><span class="en">Announcements</span></h2>
+    <ul>
+      <li><span class="ja">大事な連絡は、長押しして「お知らせに投稿」します。</span><span class="en">For important notices, long-press and choose "Post to Announcements."</span></li>
+      <li><span class="ja">お知らせはタイムラインに流されず、メガホンからいつでも見られます。</span><span class="en">Announcements never scroll away — open them anytime from the megaphone icon.</span></li>
+      <li><span class="ja">投稿できるのはオーナーと管理者だけです。</span><span class="en">Only owners and admins can post.</span></li>
+    </ul>
+  </section>
+
+  <!-- 6 AI -->
+  <section class="step">
+    <h2><span class="num">6</span><span class="ja">AI 機能</span><span class="en">AI Features</span></h2>
+    <ul>
+      <li><span class="ja">ChatGPT タブでは、母国語で AI に質問できます。</span><span class="en">In the ChatGPT tab, ask the AI questions in your own language.</span></li>
+      <li><span class="ja">翻訳アイコンで、翻訳と音声のエンジンを切り替えられます(Google / ChatGPT / Gemini)。</span><span class="en">Use the translation icon to switch engines (Google / ChatGPT / Gemini).</span></li>
+    </ul>
+  </section>
+
+  <!-- 7 Owner management -->
+  <section class="step">
+    <h2><span class="num">7</span><span class="ja">オーナーの管理</span><span class="en">Owner Management</span></h2>
+    <ul>
+      <li><span class="ja">コインアイコンで、ポイント残高と利用履歴を確認できます。</span><span class="en">Tap the coin icon to check your point balance and usage history.</span></li>
+      <li><span class="ja">ポイントはアプリ内で購入します。</span><span class="en">Buy points in the app.</span></li>
+      <li><span class="ja">管理者設定から、メンバーの管理ができます。</span><span class="en">Manage members from the admin settings.</span></li>
+    </ul>
+  </section>
+
+  <!-- 8 Safety -->
+  <section class="step">
+    <h2><span class="num">8</span><span class="ja">安心・読みやすさ</span><span class="en">Safety &amp; Accessibility</span></h2>
+    <ul>
+      <li><span class="ja">ハラスメントを感じたら、画面をダブルタップ。透かし入りの記録が保存され、管理者にも送られます。</span><span class="en">If you experience harassment, double-tap the screen. A watermarked record is saved and sent to the admin.</span></li>
+      <li><span class="ja">背景を長押しすると、文字の大きさを変えられます。</span><span class="en">Long-press the background to change the text size.</span></li>
+      <li><span class="ja">スピーカーをオンにすると、新しいメッセージを自動で読み上げます。</span><span class="en">Turn on the speaker to have new messages read aloud automatically.</span></li>
+    </ul>
+  </section>
+
+  <footer class="note">
+    <span class="ja">操作動画は順次追加していきます。<span class="soon">動画は準備中</span></span>
+    <span class="en">Step-by-step videos will be added soon.<span class="soon">Videos coming soon</span></span>
+  </footer>
+
+</div>
+
+<div class="lightbox" id="lightbox" onclick="closeBox()"><img id="lightbox-img" src="" alt=""></div>
+
+<script>
+  document.querySelectorAll('.figs img').forEach(function(im){
+    im.addEventListener('click', function(){
+      document.getElementById('lightbox-img').src = im.src;
+      document.getElementById('lightbox').classList.add('open');
+    });
+  });
+  function closeBox(){ document.getElementById('lightbox').classList.remove('open'); }
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeBox(); });
+
+  function setLang(l){
+    document.documentElement.setAttribute('data-lang', l);
+    document.getElementById('btn-ja').classList.toggle('active', l==='ja');
+    document.getElementById('btn-en').classList.toggle('active', l==='en');
+    document.documentElement.lang = l;
+  }
+  setLang('ja');
+</script>
+</body>
+</html>
