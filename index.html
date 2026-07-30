@@ -5,9 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="TransWorks - 言語の壁を超えて、コミュニケーションを支援する多言語チャットアプリ。">
   <title>TransWorks - 多言語チャットアプリ</title>
+ 
+  <!-- ▼ SNS シェア用（OGP）。og:image は 1200x630 の画像を作って repo 直下に置いてから有効化してください -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://transworks.net/">
+  <meta property="og:title" content="TransWorks - 多言語チャットアプリ">
+  <meta property="og:description" content="言語の壁を超えて。自分の母国語で書いた言葉が、相手の母国語で届きます。">
+  <meta property="og:site_name" content="TransWorks">
+  <!-- <meta property="og:image" content="https://transworks.net/ogp.png"> -->
+  <meta name="twitter:card" content="summary_large_image">
+ 
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, 'SF Pro Display', 'Helvetica Neue', sans-serif; background: #f8fafc; color: #1d1d1f; }
+    html { scroll-behavior: smooth; }
     /* Lang Toggle */
     .lang-toggle { display: flex; gap: 8px; justify-content: center; padding: 20px; position: relative; z-index: 10; }
     .lang-btn { background: rgba(255,255,255,0.45); border-top: 1px solid rgba(255,255,255,0.95); border-left: 1px solid rgba(255,255,255,0.8); border-right: 1px solid rgba(255,255,255,0.2); border-bottom: 1px solid rgba(255,255,255,0.35); color: rgba(0,0,0,0.6); padding: 5px 14px; border-radius: 20px; font-size: 12px; cursor: pointer; backdrop-filter: blur(12px); }
@@ -22,7 +33,7 @@
     .hero-tagline { font-size: 18px; font-weight: 400; color: rgba(0,0,0,0.62); letter-spacing: 3px; margin-bottom: 8px; }
     .hero-sub-tagline { font-size: 14px; font-weight: 300; color: rgba(0,0,0,0.5); letter-spacing: 1px; margin-bottom: 32px; font-style: italic; }
     .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-    .btn-dark { background: rgba(0,0,0,0.82); color: #fff; padding: 14px 32px; border-radius: 50px; font-size: 15px; font-weight: 500; border: none; cursor: pointer; letter-spacing: 0.3px; }
+    .btn-dark { background: rgba(0,0,0,0.82); color: #fff; padding: 14px 32px; border-radius: 50px; font-size: 15px; font-weight: 500; border: none; cursor: pointer; letter-spacing: 0.3px; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; }
     .btn-lg { display: inline-flex; align-items: center; gap: 9px; padding: 14px 28px; border-radius: 50px; font-size: 15px; font-weight: 500; cursor: pointer; background: rgba(255,255,255,0.45); color: rgba(0,0,0,0.6); border-top: 1px solid rgba(255,255,255,0.95); border-left: 1px solid rgba(255,255,255,0.75); border-right: 1px solid rgba(255,255,255,0.2); border-bottom: 1px solid rgba(255,255,255,0.35); backdrop-filter: blur(16px); box-shadow: 0 2px 8px rgba(0,0,0,0.05), inset 0 1px 0 rgba(255,255,255,0.85); text-decoration: none; }
     .btn-lg svg { width: 16px; height: 16px; fill: currentColor; }
     /* Glass Cards */
@@ -63,7 +74,7 @@
     /* How-to link row */
     .howto-row { margin-top: 28px; display: flex; justify-content: center; }
     /* CTA */
-    .cta-wrap { padding: 60px 24px; text-align: center; }
+    .cta-wrap { padding: 60px 24px; text-align: center; scroll-margin-top: 20px; }
     .cta-box { max-width: 520px; margin: 0 auto; padding: 48px 40px; }
     .cta-box h2 { font-size: 26px; font-weight: 500; color: #1d1d1f; margin-bottom: 10px; letter-spacing: -0.5px; }
     .cta-box p { font-size: 15px; color: rgba(0,0,0,0.62); margin-bottom: 28px; line-height: 1.7; }
@@ -168,14 +179,14 @@
     <p class="hero-tagline" id="hero-tagline">言語の壁を超えて。</p>
     <p class="hero-sub-tagline" id="hero-sub-tagline">Imagine everyone, chatting in their own words.</p>
     <div class="hero-btns">
-      <button class="btn-dark" id="btn-download">ダウンロード</button>
+      <a class="btn-dark" href="#download" id="btn-download">ダウンロード</a>
       <a class="btn-lg" href="howto.html" id="btn-howto">使い方</a>
-      <button class="btn-lg" id="btn-learn">詳しく見る</button>
+      <a class="btn-lg" href="#about" id="btn-learn">詳しく見る</a>
     </div>
   </div>
 </div>
 <!-- Intro -->
-<div class="section alt-bg">
+<div class="section alt-bg" id="about">
   <div class="section-inner">
     <p class="section-label" id="intro-label">TransWorksとは</p>
     <h2 class="section-title" id="intro-title">言語の壁を超えて、通じ合うために。</h2>
@@ -362,19 +373,19 @@
   </div>
 </div>
 <!-- CTA -->
-<div class="cta-wrap">
+<div class="cta-wrap" id="download">
   <div class="cta-box lg-card">
     <h2 id="dl-title">言葉の壁を、超えてみましょう。</h2>
-    <p id="dl-desc">TransWorksは、もうすぐリリースされます。</p>
+    <p id="dl-desc">App Store と Google Play で、ご利用いただけます。</p>
     <div class="store-btns">
-      <button class="btn-lg">
+      <a class="btn-lg" href="https://apps.apple.com/app/id6467466118" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98l-.09.06c-.22.14-2.15 1.26-2.12 3.76.03 2.98 2.61 3.97 2.64 3.98l-.07.34zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
         App Store
-      </button>
-      <button class="btn-lg">
+      </a>
+      <a class="btn-lg" href="https://play.google.com/store/apps/details?id=com.tadaki.tokairin.transworks&amp;referrer=utm_source%3Dtransworks.net%26utm_medium%3Dcta" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24"><path d="M3.18 23.76c.3.17.64.24.99.2l.09-.05L13.65 12 3.26.09l-.08-.04a1.31 1.31 0 00-1.34.15C1.5.62 1.25 1.13 1.25 1.78v20.44c0 .65.25 1.16.69 1.48l.08.05zM16.34 8.9L5.55 2.83l8.47 8.8 2.32-2.73zm2.55 5.27c.42-.24.67-.64.67-1.17s-.25-.93-.67-1.17l-2.04-1.18-2.6 3.05 2.6 2.69 2.04-1.22zm-13.34 8l10.79-6.07-2.32-2.73-8.47 8.8z"/></svg>
         Google Play
-      </button>
+      </a>
     </div>
   </div>
 </div>
@@ -452,7 +463,7 @@ const ja = {
   'dev-p5':'文字でのやり取りを中心としているため、耳の聞こえない方にも使えます。目の見えない方にも使えるよう、音声で操作できる専用モードを開発中です。',
   'dev-p6':'これからも、使ってくださる方の声を聞きながら、ゆっくりと育てていきます。',
   'dl-title':'言葉の壁を、超えてみましょう。',
-  'dl-desc':'TransWorksは、もうすぐリリースされます。',
+  'dl-desc':'App Store と Google Play で、ご利用いただけます。',
   'link-howto':'使い方','link-privacy':'プライバシーポリシー','link-terms':'利用規約','link-contact':'お問い合わせ',
   'footer-copy':'© 2026 TransWorks. All rights reserved.',
 };
@@ -519,7 +530,7 @@ const en = {
   'dev-p5':'Because the app is centered on text-based communication, it can already be used by people who are hard of hearing. A dedicated mode that can be operated by voice is being developed, so that people who are blind can also use the app.',
   'dev-p6':'We will continue to listen to the voices of those who use TransWorks, and grow the app slowly, with care.',
   'dl-title':'Step beyond the language barrier.',
-  'dl-desc':'TransWorks will be released soon.',
+  'dl-desc':'Available now on the App Store and Google Play.',
   'link-howto':'How to Use','link-privacy':'Privacy Policy','link-terms':'Terms of Use','link-contact':'Contact',
   'footer-copy':'© 2026 TransWorks. All rights reserved.',
 };
