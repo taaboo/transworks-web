@@ -231,6 +231,11 @@
         <p id="f5-desc">大事なメッセージは、アナウンスに投稿できます。投稿された内容は、タイムラインに流されず、いつでも見ることが出来ます。</p>
       </div>
       <div class="feat lg-card-sm">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M18 7l-1.41-1.41-6.34 6.34 1.41 1.41L18 7zm4.24-1.41L11.66 16.17 7.48 12l-1.41 1.41L11.66 19l12-12-1.42-1.41zM.41 13.41L6 19l1.41-1.41L1.83 12 .41 13.41z"/></svg></div>
+        <h3 id="f10-title">誰に届いたか、残る</h3>
+        <p id="f10-desc">お知らせが相手の画面に表示されると、誰にいつ表示されたかが記録に残ります。記録は投稿ごとに、ルームのオーナーと管理者が確認できます。まだ表示されていないメンバーも、名前で分かります。<sup>※3</sup></p>
+      </div>
+      <div class="feat lg-card-sm">
         <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></div>
         <h3 id="f6-title">他のルームへ、伝える</h3>
         <p id="f6-desc">取締役会議のルーム ↔ 部長会議のルーム。組織の階層に沿った情報の流れを作れます。<sup>※1</sup></p>
@@ -254,6 +259,7 @@
     <div class="notes">
       <p id="note1">※1 取締役会議のルームで話された内容のうち、自分の部署に必要なメッセージを、部長が自分の部署のルームに転送できます。このように、組織の階層をまたいで、情報を流せます。転送するとき、元のメッセージは画像として残り、編集できません。転送先のメンバーには、それぞれの母国語に翻訳された内容も、並んで表示されます。</p>
       <p id="note2">※2 記録には、ルームのID、相手のID、時刻のウォーターマークが刻まれます。</p>
+      <p id="note3">※3 記録されるのは、その人の画面に実際に表示された事実と時刻です。読んで理解したことの証明ではありません。記録は後から書き換えられません。</p>
     </div>
     <div class="howto-row">
       <a class="btn-lg" href="howto.html" id="btn-howto-feat">
@@ -419,12 +425,14 @@ const ja = {
   'f3-title':'写真の翻訳','f3-desc':'契約書、看板、書類、ホワイトボード、メニュー。写真に撮ると、その中の文字を訳します。',
   'f4-title':'わからないことを訊く','f4-desc':'チームで使うAIに、母国語で訊けます。仕事の専門用語、過去のやり取り、業務の流れを踏まえて答えます。',
   'f5-title':'大事な連絡を、残す','f5-desc':'大事なメッセージは、アナウンスに投稿できます。投稿された内容は、タイムラインに流されず、いつでも見ることが出来ます。',
+  'f10-title':'誰に届いたか、残る','f10-desc':'お知らせが相手の画面に表示されると、誰にいつ表示されたかが記録に残ります。記録は投稿ごとに、ルームのオーナーと管理者が確認できます。まだ表示されていないメンバーも、名前で分かります。<sup>※3</sup>',
   'f6-title':'他のルームへ、伝える','f6-desc':'取締役会議のルーム ↔ 部長会議のルーム。組織の階層に沿った情報の流れを作れます。<sup>※1</sup>',
   'f7-title':'ハラスメントを感じたとき','f7-desc':'画面をダブルタップすると、その画面が記録として、あなたと運営側に保存されます。<sup>※2</sup>',
   'f8-title':'少しずつ、相手の言葉を覚える','f8-desc':'タップすると訳が、ダブルタップすると元の発音が、聞けます。使っているうちに、相手の言葉が自然に身についていきます。',
   'f9-title':'読みやすく','f9-desc':'文字の大きさを変えられます。読み上げもできます。',
   'note1':'※1 取締役会議のルームで話された内容のうち、自分の部署に必要なメッセージを、部長が自分の部署のルームに転送できます。このように、組織の階層をまたいで、情報を流せます。転送するとき、元のメッセージは画像として残り、編集できません。転送先のメンバーには、それぞれの母国語に翻訳された内容も、並んで表示されます。',
   'note2':'※2 記録には、ルームのID、相手のID、時刻のウォーターマークが刻まれます。',
+  'note3':'※3 記録されるのは、その人の画面に実際に表示された事実と時刻です。読んで理解したことの証明ではありません。記録は後から書き換えられません。',
   'btn-howto-feat':'使い方を見る',
   'price-label':'料金について','price-title':'招待されたメンバーは、無料です。',
   'price-desc1':'チャットルームのオーナーが、料金を支払います。',
@@ -486,12 +494,14 @@ const en = {
   'f3-title':'Translate photos','f3-desc':'Contracts, signs, documents, whiteboards, menus. Take a photo, and the text inside is translated.',
   'f4-title':'Ask when you don\'t understand','f4-desc':'Ask the team\'s AI assistant in your own language. It answers based on your work-specific terminology, past conversations, and workflow.',
   'f5-title':'Keep important messages','f5-desc':'Important messages can be posted to the announcement room. They are not washed away in the timeline, and can be seen anytime.',
+  'f10-title':'See who it reached','f10-desc':'When an announcement is shown on a member\'s screen, a record is kept of who saw it and when. The owner and admins of the room can check this for each post. Members who have not seen it yet are also listed by name.<sup>※3</sup>',
   'f6-title':'Pass to other rooms','f6-desc':'Board meeting room ↔ department head meeting room. You can shape the flow of information along the layers of your organization.<sup>※1</sup>',
   'f7-title':'When you feel harassment','f7-desc':'Double-tap the screen, and that screen is saved as a record, both to you and to the operator.<sup>※2</sup>',
   'f8-title':'Pick up the other person\'s language','f8-desc':'Tap to see the translation, double-tap to hear the original pronunciation. As you use it, you naturally learn the other person\'s language.',
   'f9-title':'Easier to read','f9-desc':'You can adjust the text size. You can also have messages read aloud.',
   'note1':'※1 From what was discussed in the board meeting room, the department head can forward messages relevant to their department to their own room. In this way, information can flow across the layers of an organization. When forwarded, the original message remains as an image and cannot be edited. The forwarded content is also shown in each member\'s own language, side by side.',
   'note2':'※2 The record includes a watermark with the room ID, the other person\'s ID, and the timestamp.',
+  'note3':'※3 What is recorded is the fact and time that the post was actually displayed on that person\'s screen. It is not proof that they read and understood it. Records cannot be altered afterwards.',
   'btn-howto-feat':'See how to use it',
   'price-label':'About pricing','price-title':'Invited members use it for free.',
   'price-desc1':'The owner of the chat room pays for the service.',
