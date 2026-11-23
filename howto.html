@@ -83,6 +83,13 @@
     background:var(--accent); color:#fff; text-decoration:none; font-size:.95rem;
   }
   .home-btn:hover{opacity:.9;}
+  /* 縦長（9:16）の動画。パソコンでも大きくなりすぎないよう幅に上限を付けて中央に置く */
+  .video-tall{
+    max-width:360px; margin:0 auto; aspect-ratio:9/16;
+    border-radius:12px; overflow:hidden; background:#000;
+  }
+  .video-tall iframe{width:100%; height:100%; border:0; display:block;}
+  .video-note{font-size:.85rem; color:var(--sub); margin:10px 0 0; text-align:center;}
   .soon{
     display:inline-block; background:var(--accent-soft); color:var(--accent);
     font-size:.8rem; padding:3px 10px; border-radius:999px; margin-left:8px; vertical-align:middle;
@@ -103,6 +110,15 @@
     <button id="btn-ja" class="active" onclick="setLang('ja')">日本語</button>
     <button id="btn-en" onclick="setLang('en')">English</button>
   </div>
+
+  <!-- 動画（はじめての TransWorks） -->
+  <section class="step">
+    <h2><span class="ja">動画で見る（はじめての TransWorks）</span><span class="en">Watch the video (Getting started with TransWorks)</span></h2>
+    <div class="video-tall">
+      <iframe src="https://www.youtube.com/embed/DiACL9y5fDs" title="はじめての TransWorks / Getting started with TransWorks" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <p class="video-note"><span class="ja">※ この動画の字幕は日本語です。</span><span class="en">※ The subtitles in this video are in Japanese. Subtitles in your language will be available in the app.</span></p>
+  </section>
 
   <!-- 1 About -->
   <section class="step">
@@ -218,9 +234,9 @@
   </section>
 
   <footer class="note">
-    <span class="ja">操作動画は順次追加していきます。<span class="soon">動画は準備中</span><br>
+    <span class="ja">ほかの操作の動画も、順次追加していきます。<br>
       ご不明な点は <a href="mailto:transworks.net@gmail.com">transworks.net@gmail.com</a> までお問い合わせください。</span>
-    <span class="en">Step-by-step videos will be added soon.<span class="soon">Videos coming soon</span><br>
+    <span class="en">More step-by-step videos will be added.<br>
       For any questions, please contact <a href="mailto:transworks.net@gmail.com">transworks.net@gmail.com</a>.</span>
   </footer>
 
