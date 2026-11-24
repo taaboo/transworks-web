@@ -1,0 +1,1137 @@
+{
+  "version": 1,
+  "_note": "start/end は動画の中の秒。[start, start+fade] は前の場面からのフェード中。area の x, y, w, h は動画の幅・高さに対する割合（0〜1）。style の *_size は動画の幅に対する文字の大きさの割合。text の \n は改行の指定。ja は字幕入りの動画と同じ文。en は翻訳の原文。",
+  "video": {
+    "file": "howto_clean.mp4",
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "duration": 149.0
+  },
+  "source_language": "en",
+  "fade": 0.35,
+  "scenes": [
+    {
+      "id": "s00",
+      "no": 0,
+      "start": 0.0,
+      "end": 5.5,
+      "kind": "title",
+      "heading": null,
+      "text": {
+        "title": {
+          "en": "Getting started\nwith TransWorks",
+          "ja": "はじめての\nTransWorks"
+        },
+        "subtitle": {
+          "en": "Create an account,\ninvite members,\nand start talking",
+          "ja": "アカウントを作って、\nメンバーを招いて、\n話してみるまで"
+        }
+      },
+      "area": {
+        "title": {
+          "x": 0.0741,
+          "y": 0.1354,
+          "w": 0.8519,
+          "h": 0.3125
+        },
+        "subtitle": {
+          "x": 0.0926,
+          "y": 0.4479,
+          "w": 0.8148,
+          "h": 0.4167
+        }
+      },
+      "style": {
+        "background": "#F8FAFC",
+        "title": "#1D1D1F",
+        "subtitle": "#5E5F61",
+        "rule": "#C7C9CC",
+        "title_size": 0.0852,
+        "subtitle_size": 0.0481,
+        "title_line_height": 1.3,
+        "subtitle_line_height": 1.5
+      }
+    },
+    {
+      "id": "s0A",
+      "no": "0A",
+      "start": 5.5,
+      "end": 14.0,
+      "kind": "notice",
+      "heading": null,
+      "text": {
+        "en": "This video was recorded on the phone of the Japanese developer who makes TransWorks.\nOn your phone, the app will be shown in the language you chose.",
+        "ja": "この動画は、TransWorks を作っている\n日本人の開発者が、\n自分のスマホで撮りました。\nあなたのスマホでは、\nあなたが選んだ言語で表示されます。"
+      },
+      "area": {
+        "text": {
+          "x": 0.0741,
+          "y": 0.1042,
+          "w": 0.8519,
+          "h": 0.7917
+        }
+      },
+      "style": {
+        "background": "#F8FAFC",
+        "text": "#1D1D1F",
+        "text_size": 0.0556,
+        "line_height": 1.6
+      }
+    },
+    {
+      "id": "s01",
+      "no": 1,
+      "start": 14.0,
+      "end": 18.5,
+      "kind": "caption",
+      "heading": {
+        "en": "1  Create an account",
+        "ja": "1  アカウントを作る"
+      },
+      "text": {
+        "en": "Open the app. Tap the button in the red circle, and choose your language.",
+        "ja": "アプリを開いたら、まん中のボタンを押して、使う言葉を選びます。"
+      },
+      "area": {
+        "band": {
+          "x": 0.0,
+          "y": 0.7396,
+          "w": 1.0,
+          "h": 0.2604
+        },
+        "heading": {
+          "x": 0.0444,
+          "y": 0.7573,
+          "w": 0.9111,
+          "h": 0.0302
+        },
+        "text": {
+          "x": 0.0444,
+          "y": 0.8021,
+          "w": 0.9111,
+          "h": 0.1771
+        }
+      },
+      "style": {
+        "band": "#1F2A44",
+        "text": "#FFFFFF",
+        "heading_background": "#FFC400",
+        "heading_text": "#1F2A44",
+        "text_size": 0.0537,
+        "heading_size": 0.0315,
+        "line_height": 1.38
+      }
+    },
+    {
+      "id": "s02",
+      "no": 2,
+      "start": 18.5,
+      "end": 23.0,
+      "kind": "caption",
+      "heading": {
+        "en": "1  Create an account",
+        "ja": "1  アカウントを作る"
+      },
+      "text": {
+        "en": "Choose your language from the list. In this video, Japanese is chosen.",
+        "ja": "一覧から「Japanese（日本語）」を選びます。"
+      },
+      "area": {
+        "band": {
+          "x": 0.0,
+          "y": 0.7396,
+          "w": 1.0,
+          "h": 0.2604
+        },
+        "heading": {
+          "x": 0.0444,
+          "y": 0.7573,
+          "w": 0.9111,
+          "h": 0.0302
+        },
+        "text": {
+          "x": 0.0444,
+          "y": 0.8021,
+          "w": 0.9111,
+          "h": 0.1771
+        }
+      },
+      "style": {
+        "band": "#1F2A44",
+        "text": "#FFFFFF",
+        "heading_background": "#FFC400",
+        "heading_text": "#1F2A44",
+        "text_size": 0.0537,
+        "heading_size": 0.0315,
+        "line_height": 1.38
+      }
+    },
+    {
+      "id": "s03",
+      "no": 3,
+      "start": 23.0,
+      "end": 28.5,
+      "kind": "caption",
+      "heading": {
+        "en": "1  Create an account",
+        "ja": "1  アカウントを作る"
+      },
+      "text": {
+        "en": "Enter your email address and a password (8 to 20 characters).\nEnter the same password twice.",
+        "ja": "メールアドレスと、パスワード（8〜20文字）を入れます。\nパスワードは、同じものを2回入れます。"
+      },
+      "area": {
+        "band": {
+          "x": 0.0,
+          "y": 0.7396,
+          "w": 1.0,
+          "h": 0.2604
+        },
+        "heading": {
+          "x": 0.0444,
+          "y": 0.7573,
+          "w": 0.9111,
+          "h": 0.0302
+        },
+        "text": {
+          "x": 0.0444,
+          "y": 0.8021,
+          "w": 0.9111,
+          "h": 0.1771
+        }
+      },
+      "style": {
+        "band": "#1F2A44",
+        "text": "#FFFFFF",
+        "heading_background": "#FFC400",
+        "heading_text": "#1F2A44",
+        "text_size": 0.0537,
+        "heading_size": 0.0315,
+        "line_height": 1.38
+      }
+    },
+    {
+      "id": "s04",
+      "no": 4,
+      "start": 28.5,
+      "end": 33.0,
+      "kind": "caption",
+      "heading": {
+        "en": "1  Create an account",
+        "ja": "1  アカウントを作る"
+      },
+      "text": {
+        "en": "When you are done, tap the button in the red circle.",
+        "ja": "入れ終わったら「登録」を押します。"
+      },
+      "area": {
+        "band": {
+          "x": 0.0,
+          "y": 0.7396,
+          "w": 1.0,
+          "h": 0.2604
+        },
+        "heading": {
+          "x": 0.0444,
+          "y": 0.7573,
+          "w": 0.9111,
+          "h": 0.0302
+        },
+        "text": {
+          "x": 0.0444,
+          "y": 0.8021,
+          "w": 0.9111,
+          "h": 0.1771
+        }
+      },
+      "style": {
+        "band": "#1F2A44",
+        "text": "#FFFFFF",
+        "heading_background": "#FFC400",
+        "heading_text": "#1F2A44",
+        "text_size": 0.0537,
+        "heading_size": 0.0315,
+        "line_height": 1.38
+      }
+    },
+    {
+      "id": "s05",
+      "no": 5,
+      "start": 33.0,
+      "end": 37.5,
+      "kind": "caption",
+      "heading": {
+        "en": "1  Create an account",
+        "ja": "1  アカウントを作る"
+      },
+      "text": {
+        "en": "If your email address is correct, tap the button in the red circle.",
+        "ja": "メールアドレスがまちがっていなければ「OK」を押します。"
+      },
+      "area": {
+        "band": {
+          "x": 0.0,
+          "y": 0.7396,
+          "w": 1.0,
+          "h": 0.2604
+        },
+        "heading": {
+          "x": 0.0444,
+          "y": 0.7573,
+          "w": 0.9111,
+          "h": 0.0302
+        },
+        "text": {
+          "x": 0.0444,
+          "y": 0.8021,
+          "w": 0.9111,
+          "h": 0.1771
+        }
+      },
+      "style": {
+        "band": "#1F2A44",
+        "text": "#FFFFFF",
+        "heading_background": "#FFC400",
+        "heading_text": "#1F2A44",
+        "text_size": 0.0537,
+        "heading_size": 0.0315,
+        "line_height": 1.38
+      }
+    },
+    {
+      "id": "s06",
+      "no": 6,
+      "start": 37.5,
+      "end": 43.0,
+      "kind": "caption",
+      "heading": {
+        "en": "1  Create an account",
+        "ja": "1  アカウントを作る"
+      },
+      "text": {
+        "en": "We send you an email to check your address.\nOpen the email and tap the blue link in it.",
+        "ja": "確認のメールが届きます。\nメールを開いて、中の青いリンクを押してください。"
+      },
+      "area": {
+        "band": {
+          "x": 0.0,
+          "y": 0.7396,
+          "w": 1.0,
+          "h": 0.2604
+        },
+        "heading": {
+          "x": 0.0444,
+          "y": 0.7573,
+          "w": 0.9111,
+          "h": 0.0302
+        },
+        "text": {
+          "x": 0.0444,
+          "y": 0.8021,
+          "w": 0.9111,
+          "h": 0.1771
+        }
+      },
+      "style": {
+        "band": "#1F2A44",
+        "text": "#FFFFFF",
+        "heading_background": "#FFC400",
+        "heading_text": "#1F2A44",
+        "text_size": 0.0537,
+        "heading_size": 0.0315,
+        "line_height": 1.38
+      }
+    },
+    {
+      "id": "s07",
+      "no": 7,
+      "start": 43.0,
+      "end": 48.5,
+      "kind": "caption",
+      "heading": {
+        "en": "1  Create an account",
+        "ja": "1  アカウントを作る"
+      },
+      "text": {
+        "en": "The link opens this page. Tap the button in the red circle.",
+        "ja": "リンクを押すと、この画面が開きます。「確認を完了」を押します。"
+      },
+      "area": {
+        "band": {
+          "x": 0.0,
+          "y": 0.7396,
+          "w": 1.0,
+          "h": 0.2604
+        },
+        "heading": {
+          "x": 0.0444,
+          "y": 0.7573,
+          "w": 0.9111,
+          "h": 0.0302
+        },
+        "text": {
+          "x": 0.0444,
+          "y": 0.8021,
+          "w": 0.9111,
+          "h": 0.1771
+        }
+      },
+      "style": {
+        "band": "#1F2A44",
+        "text": "#FFFFFF",
+        "heading_background": "#FFC400",
+        "heading_text": "#1F2A44",
+        "text_size": 0.0537,
+        "heading_size": 0.0315,
+        "line_height": 1.38
+      }
+    },
+    {
+      "id": "s08",
+      "no": 8,
+      "start": 48.5,
+      "end": 53.0,
+      "kind": "caption",
+      "heading": {
+        "en": "1  Create an account",
+        "ja": "1  アカウントを作る"
+      },
+      "text": {
+        "en": "Your email address is now confirmed.",
+        "ja": "これで、メールアドレスの確認ができました。"
+      },
+      "area": {
+        "band": {
+          "x": 0.0,
+          "y": 0.7396,
+          "w": 1.0,
+          "h": 0.2604
+        },
+        "heading": {
+          "x": 0.0444,
+          "y": 0.7573,
+          "w": 0.9111,
+          "h": 0.0302
+        },
+        "text": {
+          "x": 0.0444,
+          "y": 0.8021,
+          "w": 0.9111,
+          "h": 0.1771
+        }
+      },
+      "style": {
+        "band": "#1F2A44",
+        "text": "#FFFFFF",
+        "heading_background": "#FFC400",
+        "heading_text": "#1F2A44",
+        "text_size": 0.0537,
+        "heading_size": 0.0315,
+        "line_height": 1.38
+      }
+    },
+    {
+      "id": "s09",
+      "no": 9,
+      "start": 53.0,
+      "end": 57.5,
+      "kind": "caption",
+      "heading": {
+        "en": "1  Create an account",
+        "ja": "1  アカウントを作る"
+      },
+      "text": {
+        "en": "Go back to the app. The next screen opens.",
+        "ja": "アプリに戻ると、続きの画面に進みます。"
+      },
+      "area": {
+        "band": {
+          "x": 0.0,
+          "y": 0.7396,
+          "w": 1.0,
+          "h": 0.2604
+        },
+        "heading": {
+          "x": 0.0444,
+          "y": 0.7573,
+          "w": 0.9111,
+          "h": 0.0302
+        },
+        "text": {
+          "x": 0.0444,
+          "y": 0.8021,
+          "w": 0.9111,
+          "h": 0.1771
+        }
+      },
+      "style": {
+        "band": "#1F2A44",
+        "text": "#FFFFFF",
+        "heading_background": "#FFC400",
+        "heading_text": "#1F2A44",
+        "text_size": 0.0537,
+        "heading_size": 0.0315,
+        "line_height": 1.38
+      }
+    },
+    {
+      "id": "s10",
+      "no": 10,
+      "start": 57.5,
+      "end": 64.0,
+      "kind": "caption",
+      "heading": {
+        "en": "1  Create an account",
+        "ja": "1  アカウントを作る"
+      },
+      "text": {
+        "en": "You get 300 points to start.\nIf you do not have an invitation code, tap the button in the red circle.",
+        "ja": "はじめに 300 ポイントがもらえます。\n招待コードを持っていなければ「いいえ」を押します。"
+      },
+      "area": {
+        "band": {
+          "x": 0.0,
+          "y": 0.7396,
+          "w": 1.0,
+          "h": 0.2604
+        },
+        "heading": {
+          "x": 0.0444,
+          "y": 0.7573,
+          "w": 0.9111,
+          "h": 0.0302
+        },
+        "text": {
+          "x": 0.0444,
+          "y": 0.8021,
+          "w": 0.9111,
+          "h": 0.1771
+        }
+      },
+      "style": {
+        "band": "#1F2A44",
+        "text": "#FFFFFF",
+        "heading_background": "#FFC400",
+        "heading_text": "#1F2A44",
+        "text_size": 0.0537,
+        "heading_size": 0.0315,
+        "line_height": 1.38
+      }
+    },
+    {
+      "id": "s11",
+      "no": 11,
+      "start": 64.0,
+      "end": 71.5,
+      "kind": "caption",
+      "heading": {
+        "en": "1  Create an account",
+        "ja": "1  アカウントを作る"
+      },
+      "text": {
+        "en": "Enter your name (a nickname), and choose your type of work and the country where you work.\nThen tap the button in the red circle.",
+        "ja": "名前（ニックネーム）、仕事の種類、働いている国を選びます。\n最後に「保存」を押します。"
+      },
+      "area": {
+        "band": {
+          "x": 0.0,
+          "y": 0.7396,
+          "w": 1.0,
+          "h": 0.2604
+        },
+        "heading": {
+          "x": 0.0444,
+          "y": 0.7573,
+          "w": 0.9111,
+          "h": 0.0302
+        },
+        "text": {
+          "x": 0.0444,
+          "y": 0.8021,
+          "w": 0.9111,
+          "h": 0.1771
+        }
+      },
+      "style": {
+        "band": "#1F2A44",
+        "text": "#FFFFFF",
+        "heading_background": "#FFC400",
+        "heading_text": "#1F2A44",
+        "text_size": 0.0537,
+        "heading_size": 0.0315,
+        "line_height": 1.38
+      }
+    },
+    {
+      "id": "s12",
+      "no": 12,
+      "start": 71.5,
+      "end": 77.0,
+      "kind": "caption",
+      "heading": {
+        "en": "2  Make a chat room",
+        "ja": "2  チャットルームを作る"
+      },
+      "text": {
+        "en": "To make a chat room, tap the button in the red box.",
+        "ja": "「チャットルームを作成する」を押します。"
+      },
+      "area": {
+        "band": {
+          "x": 0.0,
+          "y": 0.7396,
+          "w": 1.0,
+          "h": 0.2604
+        },
+        "heading": {
+          "x": 0.0444,
+          "y": 0.7573,
+          "w": 0.9111,
+          "h": 0.0302
+        },
+        "text": {
+          "x": 0.0444,
+          "y": 0.8021,
+          "w": 0.9111,
+          "h": 0.1771
+        }
+      },
+      "style": {
+        "band": "#1F2A44",
+        "text": "#FFFFFF",
+        "heading_background": "#FFC400",
+        "heading_text": "#1F2A44",
+        "text_size": 0.0537,
+        "heading_size": 0.0315,
+        "line_height": 1.38
+      }
+    },
+    {
+      "id": "s13",
+      "no": 13,
+      "start": 77.0,
+      "end": 82.5,
+      "kind": "caption",
+      "heading": {
+        "en": "2  Make a chat room",
+        "ja": "2  チャットルームを作る"
+      },
+      "text": {
+        "en": "This is the screen for making a chat room. Enter a name for the room.",
+        "ja": "チャットルームを作る画面です。部屋の名前を入れます。"
+      },
+      "area": {
+        "band": {
+          "x": 0.0,
+          "y": 0.7396,
+          "w": 1.0,
+          "h": 0.2604
+        },
+        "heading": {
+          "x": 0.0444,
+          "y": 0.7573,
+          "w": 0.9111,
+          "h": 0.0302
+        },
+        "text": {
+          "x": 0.0444,
+          "y": 0.8021,
+          "w": 0.9111,
+          "h": 0.1771
+        }
+      },
+      "style": {
+        "band": "#1F2A44",
+        "text": "#FFFFFF",
+        "heading_background": "#FFC400",
+        "heading_text": "#1F2A44",
+        "text_size": 0.0537,
+        "heading_size": 0.0315,
+        "line_height": 1.38
+      }
+    },
+    {
+      "id": "s14",
+      "no": 14,
+      "start": 82.5,
+      "end": 88.0,
+      "kind": "caption",
+      "heading": {
+        "en": "2  Make a chat room",
+        "ja": "2  チャットルームを作る"
+      },
+      "text": {
+        "en": "After you enter the name, tap the blue button at the bottom, in the red box.",
+        "ja": "名前を入れたら、下の青いボタン「QRコードを作成して表示する」を押します。"
+      },
+      "area": {
+        "band": {
+          "x": 0.0,
+          "y": 0.7396,
+          "w": 1.0,
+          "h": 0.2604
+        },
+        "heading": {
+          "x": 0.0444,
+          "y": 0.7573,
+          "w": 0.9111,
+          "h": 0.0302
+        },
+        "text": {
+          "x": 0.0444,
+          "y": 0.8021,
+          "w": 0.9111,
+          "h": 0.1771
+        }
+      },
+      "style": {
+        "band": "#1F2A44",
+        "text": "#FFFFFF",
+        "heading_background": "#FFC400",
+        "heading_text": "#1F2A44",
+        "text_size": 0.0537,
+        "heading_size": 0.0315,
+        "line_height": 1.38
+      }
+    },
+    {
+      "id": "s15",
+      "no": 15,
+      "start": 88.0,
+      "end": 94.5,
+      "kind": "caption",
+      "heading": {
+        "en": "3  Invite members with a QR code",
+        "ja": "3  QRコードでメンバーを招く"
+      },
+      "text": {
+        "en": "A QR code for joining the room is ready.\nShow this screen to your members.",
+        "ja": "部屋に入るための QR コードができました。\nメンバーに、この画面を見せます。"
+      },
+      "area": {
+        "band": {
+          "x": 0.0,
+          "y": 0.7396,
+          "w": 1.0,
+          "h": 0.2604
+        },
+        "heading": {
+          "x": 0.0444,
+          "y": 0.7573,
+          "w": 0.9111,
+          "h": 0.0302
+        },
+        "text": {
+          "x": 0.0444,
+          "y": 0.8021,
+          "w": 0.9111,
+          "h": 0.1771
+        }
+      },
+      "style": {
+        "band": "#1F2A44",
+        "text": "#FFFFFF",
+        "heading_background": "#FFC400",
+        "heading_text": "#1F2A44",
+        "text_size": 0.0537,
+        "heading_size": 0.0315,
+        "line_height": 1.38
+      }
+    },
+    {
+      "id": "s16",
+      "no": 16,
+      "start": 94.5,
+      "end": 100.0,
+      "kind": "caption",
+      "heading": {
+        "en": "3  Invite members with a QR code",
+        "ja": "3  QRコードでメンバーを招く"
+      },
+      "text": {
+        "en": "From here, this is the member's phone.\nOn this screen, tap the item in the red box.",
+        "ja": "ここからは、メンバーのスマホです。\n「設定」で「QRコードを読み取る」を押します。"
+      },
+      "area": {
+        "band": {
+          "x": 0.0,
+          "y": 0.7396,
+          "w": 1.0,
+          "h": 0.2604
+        },
+        "heading": {
+          "x": 0.0444,
+          "y": 0.7573,
+          "w": 0.9111,
+          "h": 0.0302
+        },
+        "text": {
+          "x": 0.0444,
+          "y": 0.8021,
+          "w": 0.9111,
+          "h": 0.1771
+        }
+      },
+      "style": {
+        "band": "#1F2A44",
+        "text": "#FFFFFF",
+        "heading_background": "#FFC400",
+        "heading_text": "#1F2A44",
+        "text_size": 0.0537,
+        "heading_size": 0.0315,
+        "line_height": 1.38
+      }
+    },
+    {
+      "id": "s17",
+      "no": 17,
+      "start": 100.0,
+      "end": 104.5,
+      "kind": "caption",
+      "heading": {
+        "en": "3  Invite members with a QR code",
+        "ja": "3  QRコードでメンバーを招く"
+      },
+      "text": {
+        "en": "Tap the item in the red box to use the camera.",
+        "ja": "「カメラで読み取る」を押します。"
+      },
+      "area": {
+        "band": {
+          "x": 0.0,
+          "y": 0.7396,
+          "w": 1.0,
+          "h": 0.2604
+        },
+        "heading": {
+          "x": 0.0444,
+          "y": 0.7573,
+          "w": 0.9111,
+          "h": 0.0302
+        },
+        "text": {
+          "x": 0.0444,
+          "y": 0.8021,
+          "w": 0.9111,
+          "h": 0.1771
+        }
+      },
+      "style": {
+        "band": "#1F2A44",
+        "text": "#FFFFFF",
+        "heading_background": "#FFC400",
+        "heading_text": "#1F2A44",
+        "text_size": 0.0537,
+        "heading_size": 0.0315,
+        "line_height": 1.38
+      }
+    },
+    {
+      "id": "s18",
+      "no": 18,
+      "start": 104.5,
+      "end": 109.0,
+      "kind": "caption",
+      "heading": {
+        "en": "3  Invite members with a QR code",
+        "ja": "3  QRコードでメンバーを招く"
+      },
+      "text": {
+        "en": "Point the camera at the QR code on the owner's phone.",
+        "ja": "オーナーのスマホに出ている QR コードを、カメラに写します。"
+      },
+      "area": {
+        "band": {
+          "x": 0.0,
+          "y": 0.7396,
+          "w": 1.0,
+          "h": 0.2604
+        },
+        "heading": {
+          "x": 0.0444,
+          "y": 0.7573,
+          "w": 0.9111,
+          "h": 0.0302
+        },
+        "text": {
+          "x": 0.0444,
+          "y": 0.8021,
+          "w": 0.9111,
+          "h": 0.1771
+        }
+      },
+      "style": {
+        "band": "#1F2A44",
+        "text": "#FFFFFF",
+        "heading_background": "#FFC400",
+        "heading_text": "#1F2A44",
+        "text_size": 0.0537,
+        "heading_size": 0.0315,
+        "line_height": 1.38
+      }
+    },
+    {
+      "id": "s19",
+      "no": 19,
+      "start": 109.0,
+      "end": 113.5,
+      "kind": "caption",
+      "heading": {
+        "en": "3  Invite members with a QR code",
+        "ja": "3  QRコードでメンバーを招く"
+      },
+      "text": {
+        "en": "The member has now joined the chat room.",
+        "ja": "これで、メンバーがチャットルームに入りました。"
+      },
+      "area": {
+        "band": {
+          "x": 0.0,
+          "y": 0.7396,
+          "w": 1.0,
+          "h": 0.2604
+        },
+        "heading": {
+          "x": 0.0444,
+          "y": 0.7573,
+          "w": 0.9111,
+          "h": 0.0302
+        },
+        "text": {
+          "x": 0.0444,
+          "y": 0.8021,
+          "w": 0.9111,
+          "h": 0.1771
+        }
+      },
+      "style": {
+        "band": "#1F2A44",
+        "text": "#FFFFFF",
+        "heading_background": "#FFC400",
+        "heading_text": "#1F2A44",
+        "text_size": 0.0537,
+        "heading_size": 0.0315,
+        "line_height": 1.38
+      }
+    },
+    {
+      "id": "s20",
+      "no": 20,
+      "start": 113.5,
+      "end": 120.0,
+      "kind": "caption",
+      "heading": {
+        "en": "4  Send a message",
+        "ja": "4  メッセージを送る"
+      },
+      "text": {
+        "en": "This is the owner's phone. Write a message in the box at the bottom (here, in Japanese), and tap the arrow on the right to send it.",
+        "ja": "オーナーのスマホです。下の欄に日本語で書いて、右の矢印を押すと送れます。"
+      },
+      "area": {
+        "band": {
+          "x": 0.0,
+          "y": 0.7396,
+          "w": 1.0,
+          "h": 0.2604
+        },
+        "heading": {
+          "x": 0.0444,
+          "y": 0.7573,
+          "w": 0.9111,
+          "h": 0.0302
+        },
+        "text": {
+          "x": 0.0444,
+          "y": 0.8021,
+          "w": 0.9111,
+          "h": 0.1771
+        }
+      },
+      "style": {
+        "band": "#1F2A44",
+        "text": "#FFFFFF",
+        "heading_background": "#FFC400",
+        "heading_text": "#1F2A44",
+        "text_size": 0.0537,
+        "heading_size": 0.0315,
+        "line_height": 1.38
+      }
+    },
+    {
+      "id": "s21",
+      "no": 21,
+      "start": 120.0,
+      "end": 127.5,
+      "kind": "caption",
+      "heading": {
+        "en": "4  Send a message",
+        "ja": "4  メッセージを送る"
+      },
+      "text": {
+        "en": "On the member's phone, the message is shown in Vietnamese.\nThe member can also reply in their own language.",
+        "ja": "メンバーのスマホでは、ベトナム語で表示されます。\nメンバーも、自分の言葉で返事を書けます。"
+      },
+      "area": {
+        "band": {
+          "x": 0.0,
+          "y": 0.7396,
+          "w": 1.0,
+          "h": 0.2604
+        },
+        "heading": {
+          "x": 0.0444,
+          "y": 0.7573,
+          "w": 0.9111,
+          "h": 0.0302
+        },
+        "text": {
+          "x": 0.0444,
+          "y": 0.8021,
+          "w": 0.9111,
+          "h": 0.1771
+        }
+      },
+      "style": {
+        "band": "#1F2A44",
+        "text": "#FFFFFF",
+        "heading_background": "#FFC400",
+        "heading_text": "#1F2A44",
+        "text_size": 0.0537,
+        "heading_size": 0.0315,
+        "line_height": 1.38
+      }
+    },
+    {
+      "id": "s22",
+      "no": 22,
+      "start": 127.5,
+      "end": 134.0,
+      "kind": "caption",
+      "heading": {
+        "en": "4  Send a message",
+        "ja": "4  メッセージを送る"
+      },
+      "text": {
+        "en": "On the owner's phone, the member's reply is shown in Japanese.",
+        "ja": "メンバーの返事は、オーナーのスマホでは日本語で表示されます。"
+      },
+      "area": {
+        "band": {
+          "x": 0.0,
+          "y": 0.7396,
+          "w": 1.0,
+          "h": 0.2604
+        },
+        "heading": {
+          "x": 0.0444,
+          "y": 0.7573,
+          "w": 0.9111,
+          "h": 0.0302
+        },
+        "text": {
+          "x": 0.0444,
+          "y": 0.8021,
+          "w": 0.9111,
+          "h": 0.1771
+        }
+      },
+      "style": {
+        "band": "#1F2A44",
+        "text": "#FFFFFF",
+        "heading_background": "#FFC400",
+        "heading_text": "#1F2A44",
+        "text_size": 0.0537,
+        "heading_size": 0.0315,
+        "line_height": 1.38
+      }
+    },
+    {
+      "id": "s23",
+      "no": 23,
+      "start": 134.0,
+      "end": 142.5,
+      "kind": "caption",
+      "heading": {
+        "en": "5  Check your free trial",
+        "ja": "5  通帳で無料期間を見る"
+      },
+      "text": {
+        "en": "Tap the yellow money mark at the top left.\nYou can see how many free days are left, and how much you have used.",
+        "ja": "左上の黄色いお金のマークを押すと、通帳が開きます。\n無料期間の残りの日数と、使った量が見られます。"
+      },
+      "area": {
+        "band": {
+          "x": 0.0,
+          "y": 0.7396,
+          "w": 1.0,
+          "h": 0.2604
+        },
+        "heading": {
+          "x": 0.0444,
+          "y": 0.7573,
+          "w": 0.9111,
+          "h": 0.0302
+        },
+        "text": {
+          "x": 0.0444,
+          "y": 0.8021,
+          "w": 0.9111,
+          "h": 0.1771
+        }
+      },
+      "style": {
+        "band": "#1F2A44",
+        "text": "#FFFFFF",
+        "heading_background": "#FFC400",
+        "heading_text": "#1F2A44",
+        "text_size": 0.0537,
+        "heading_size": 0.0315,
+        "line_height": 1.38
+      }
+    },
+    {
+      "id": "s24",
+      "no": 24,
+      "start": 142.5,
+      "end": 149.0,
+      "kind": "title",
+      "heading": null,
+      "text": {
+        "title": {
+          "en": "You are\nall set",
+          "ja": "これで準備は\nできました"
+        },
+        "subtitle": {
+          "en": "If you have questions,\nyou can find help anytime\nin the app's settings.",
+          "ja": "わからないことは、\n設定の『利用方法（ウェブサイト）』\nから、いつでも見られます。"
+        }
+      },
+      "area": {
+        "title": {
+          "x": 0.0741,
+          "y": 0.1354,
+          "w": 0.8519,
+          "h": 0.3125
+        },
+        "subtitle": {
+          "x": 0.0926,
+          "y": 0.4479,
+          "w": 0.8148,
+          "h": 0.4167
+        }
+      },
+      "style": {
+        "background": "#F8FAFC",
+        "title": "#1D1D1F",
+        "subtitle": "#5E5F61",
+        "rule": "#C7C9CC",
+        "title_size": 0.0852,
+        "subtitle_size": 0.0481,
+        "title_line_height": 1.3,
+        "subtitle_line_height": 1.5
+      }
+    }
+  ]
+}
